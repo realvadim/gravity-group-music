@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C994D458225FA88E00E70C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D457225FA88E00E70C1B /* AppDelegate.swift */; };
+		C994D45A225FA88E00E70C1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D459225FA88E00E70C1B /* ViewController.swift */; };
+		C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994D45B225FA88E00E70C1B /* Main.storyboard */; };
+		C994D460225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C994D45E225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld */; };
+		C994D462225FA89100E70C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C994D461225FA89100E70C1B /* Assets.xcassets */; };
+		C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994D463225FA89100E70C1B /* LaunchScreen.storyboard */; };
+		C994D470225FA89100E70C1B /* GravityGroupMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C994D46C225FA89100E70C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C994D44C225FA88E00E70C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C994D453225FA88E00E70C1B;
+			remoteInfo = GravityGroupMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C994D454225FA88E00E70C1B /* GravityGroupMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravityGroupMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C994D457225FA88E00E70C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C994D459225FA88E00E70C1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C994D45C225FA88E00E70C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C994D45F225FA88E00E70C1B /* GravityGroupMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GravityGroupMusic.xcdatamodel; sourceTree = "<group>"; };
+		C994D461225FA89100E70C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C994D464225FA89100E70C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C994D466225FA89100E70C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C994D46B225FA89100E70C1B /* GravityGroupMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravityGroupMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGroupMusicTests.swift; sourceTree = "<group>"; };
+		C994D471225FA89100E70C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C994D451225FA88E00E70C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C994D468225FA89100E70C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C994D44B225FA88E00E70C1B = {
+			isa = PBXGroup;
+			children = (
+				C994D456225FA88E00E70C1B /* GravityGroupMusic */,
+				C994D46E225FA89100E70C1B /* GravityGroupMusicTests */,
+				C994D455225FA88E00E70C1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C994D455225FA88E00E70C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C994D454225FA88E00E70C1B /* GravityGroupMusic.app */,
+				C994D46B225FA89100E70C1B /* GravityGroupMusicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C994D456225FA88E00E70C1B /* GravityGroupMusic */ = {
+			isa = PBXGroup;
+			children = (
+				C994D457225FA88E00E70C1B /* AppDelegate.swift */,
+				C994D459225FA88E00E70C1B /* ViewController.swift */,
+				C994D45B225FA88E00E70C1B /* Main.storyboard */,
+				C994D461225FA89100E70C1B /* Assets.xcassets */,
+				C994D463225FA89100E70C1B /* LaunchScreen.storyboard */,
+				C994D466225FA89100E70C1B /* Info.plist */,
+				C994D45E225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld */,
+			);
+			path = GravityGroupMusic;
+			sourceTree = "<group>";
+		};
+		C994D46E225FA89100E70C1B /* GravityGroupMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */,
+				C994D471225FA89100E70C1B /* Info.plist */,
+			);
+			path = GravityGroupMusicTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C994D453225FA88E00E70C1B /* GravityGroupMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C994D474225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusic" */;
+			buildPhases = (
+				C994D450225FA88E00E70C1B /* Sources */,
+				C994D451225FA88E00E70C1B /* Frameworks */,
+				C994D452225FA88E00E70C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GravityGroupMusic;
+			productName = GravityGroupMusic;
+			productReference = C994D454225FA88E00E70C1B /* GravityGroupMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C994D46A225FA89100E70C1B /* GravityGroupMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C994D477225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusicTests" */;
+			buildPhases = (
+				C994D467225FA89100E70C1B /* Sources */,
+				C994D468225FA89100E70C1B /* Frameworks */,
+				C994D469225FA89100E70C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C994D46D225FA89100E70C1B /* PBXTargetDependency */,
+			);
+			name = GravityGroupMusicTests;
+			productName = GravityGroupMusicTests;
+			productReference = C994D46B225FA89100E70C1B /* GravityGroupMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C994D44C225FA88E00E70C1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Gravity Group";
+				TargetAttributes = {
+					C994D453225FA88E00E70C1B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C994D46A225FA89100E70C1B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C994D453225FA88E00E70C1B;
+					};
+				};
+			};
+			buildConfigurationList = C994D44F225FA88E00E70C1B /* Build configuration list for PBXProject "GravityGroupMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C994D44B225FA88E00E70C1B;
+			productRefGroup = C994D455225FA88E00E70C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C994D453225FA88E00E70C1B /* GravityGroupMusic */,
+				C994D46A225FA89100E70C1B /* GravityGroupMusicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C994D452225FA88E00E70C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */,
+				C994D462225FA89100E70C1B /* Assets.xcassets in Resources */,
+				C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C994D469225FA89100E70C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C994D450225FA88E00E70C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C994D45A225FA88E00E70C1B /* ViewController.swift in Sources */,
+				C994D460225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld in Sources */,
+				C994D458225FA88E00E70C1B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C994D467225FA89100E70C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C994D470225FA89100E70C1B /* GravityGroupMusicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C994D46D225FA89100E70C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C994D453225FA88E00E70C1B /* GravityGroupMusic */;
+			targetProxy = C994D46C225FA89100E70C1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C994D45B225FA88E00E70C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C994D45C225FA88E00E70C1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C994D463225FA89100E70C1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C994D464225FA89100E70C1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C994D472225FA89100E70C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C994D473225FA89100E70C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C994D475225FA89100E70C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				INFOPLIST_FILE = GravityGroupMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.gravitygroup.vadim.GravityGroupMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C994D476225FA89100E70C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				INFOPLIST_FILE = GravityGroupMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.gravitygroup.vadim.GravityGroupMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C994D478225FA89100E70C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				INFOPLIST_FILE = GravityGroupMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.gravitygroup.vadim.GravityGroupMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GravityGroupMusic.app/GravityGroupMusic";
+			};
+			name = Debug;
+		};
+		C994D479225FA89100E70C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				INFOPLIST_FILE = GravityGroupMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.gravitygroup.vadim.GravityGroupMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GravityGroupMusic.app/GravityGroupMusic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C994D44F225FA88E00E70C1B /* Build configuration list for PBXProject "GravityGroupMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C994D472225FA89100E70C1B /* Debug */,
+				C994D473225FA89100E70C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C994D474225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C994D475225FA89100E70C1B /* Debug */,
+				C994D476225FA89100E70C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C994D477225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C994D478225FA89100E70C1B /* Debug */,
+				C994D479225FA89100E70C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C994D45E225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C994D45F225FA88E00E70C1B /* GravityGroupMusic.xcdatamodel */,
+			);
+			currentVersion = C994D45F225FA88E00E70C1B /* GravityGroupMusic.xcdatamodel */;
+			path = GravityGroupMusic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C994D44C225FA88E00E70C1B /* Project object */;
+}
