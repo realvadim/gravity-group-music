@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C988B32F22621049009619AB /* MusicMoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988B32D22621049009619AB /* MusicMoodCollectionViewCell.swift */; };
+		C988B33022621049009619AB /* MusicMoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B32E22621049009619AB /* MusicMoodCollectionViewCell.xib */; };
 		C994D458225FA88E00E70C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D457225FA88E00E70C1B /* AppDelegate.swift */; };
 		C994D45A225FA88E00E70C1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D459225FA88E00E70C1B /* ViewController.swift */; };
 		C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994D45B225FA88E00E70C1B /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C988B32D22621049009619AB /* MusicMoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		C988B32E22621049009619AB /* MusicMoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicMoodCollectionViewCell.xib; sourceTree = "<group>"; };
 		C994D454225FA88E00E70C1B /* GravityGroupMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravityGroupMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C994D457225FA88E00E70C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C994D459225FA88E00E70C1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				C994D463225FA89100E70C1B /* LaunchScreen.storyboard */,
 				C994D466225FA89100E70C1B /* Info.plist */,
 				C994D45E225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld */,
+				C988B32D22621049009619AB /* MusicMoodCollectionViewCell.swift */,
+				C988B32E22621049009619AB /* MusicMoodCollectionViewCell.xib */,
 			);
 			path = GravityGroupMusic;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 				C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */,
 				C994D462225FA89100E70C1B /* Assets.xcassets in Resources */,
 				C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */,
+				C988B33022621049009619AB /* MusicMoodCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C994D45A225FA88E00E70C1B /* ViewController.swift in Sources */,
+				C988B32F22621049009619AB /* MusicMoodCollectionViewCell.swift in Sources */,
 				C994D460225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld in Sources */,
 				C994D458225FA88E00E70C1B /* AppDelegate.swift in Sources */,
 			);
