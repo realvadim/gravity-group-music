@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Moods Collection View Controller-->
+        <!--Playlists Collection View Controller-->
         <scene sceneID="ZRh-3f-Eh2">
             <objects>
-                <collectionViewController id="N9l-GA-NxI" customClass="MoodsCollectionViewController" customModule="GravityGroupMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="N9l-GA-NxI" customClass="PlaylistsCollectionViewController" customModule="GravityGroupMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="3Ck-fR-OBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="musicmoodcell" id="pQk-Xp-DQF" customClass="MusicMoodCollectionViewCell" customModule="GravityGroupMusic" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playlistcell" id="pQk-Xp-DQF" customClass="PlaylistCollectionViewCell" customModule="GravityGroupMusic" customModuleProvider="target">
                                 <rect key="frame" x="9" y="0.0" width="357" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

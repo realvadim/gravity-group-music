@@ -1,5 +1,5 @@
 //
-//  MoodsCollectionViewController.swift
+//  PlaylistsCollectionViewController.swift
 //  GravityGroupMusic
 //
 //  Created by Vadim Miropolskiy on 4/13/19.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-/// Screen that displays the list of moods.
-class MoodsCollectionViewController: UICollectionViewController {
+/// Screen that displays playlists.
+class PlaylistsCollectionViewController: UICollectionViewController {
     
-    private let cellReuseId = "musicmoodcell"
+    private let cellReuseId = "playlistcell"
     private let names = ["EDM", "CHILL", "PARTY", "EVERGREEN", "WORKOUT", "ROMANTIC"]
 
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class MoodsCollectionViewController: UICollectionViewController {
     }
     
     private func registerCell() {
-        let cellNib = UINib(nibName: String(describing: MusicMoodCollectionViewCell.self), bundle: nil)
+        let cellNib = UINib(nibName: String(describing: PlaylistCollectionViewCell.self), bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: cellReuseId)
     }
 
@@ -32,7 +32,7 @@ class MoodsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath) as! MusicMoodCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath) as! PlaylistCollectionViewCell
         let stubImage = UIImage(named: "party")!
         cell.configure(with: stubImage, title: names[indexPath.row])
     
@@ -42,7 +42,7 @@ class MoodsCollectionViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
-extension MoodsCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension PlaylistsCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width

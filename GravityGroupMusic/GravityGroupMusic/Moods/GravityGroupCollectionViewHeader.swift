@@ -1,5 +1,5 @@
 //
-//  MoodsCollectionViewHeader.swift
+//  GravityGroupCollectionViewHeader.swift
 //  GravityGroupMusic
 //
 //  Created by Vadim Miropolskiy on 4/13/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// View to be used as the header of MoodsCollectionView.
-class MoodsCollectionViewHeader: UIView {
+/// Custom view to be used in navigation bar throughout the project.
+class GravityGroupCollectionViewHeader: UIView {
     @IBOutlet private var titleLabel: UILabel!
     
     /// Configures the view with title text.
