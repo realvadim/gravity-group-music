@@ -13,6 +13,7 @@ class NowPlayingContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "NOW PLAYING"
+        add(OneSongViewController())
     }
 
 

@@ -12,6 +12,8 @@
 		9B15910522631F970063FFEE /* PlaylistsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */; };
 		9B15911022635A1F0063FFEE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910F22635A1F0063FFEE /* LoadingViewController.swift */; };
 		9B15911322635F0F0063FFEE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15911222635F0F0063FFEE /* UIViewController+Extension.swift */; };
+		9B159117226373120063FFEE /* OneSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B159115226373120063FFEE /* OneSongViewController.swift */; };
+		9B159118226373120063FFEE /* OneSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B159116226373120063FFEE /* OneSongViewController.xib */; };
 		9B15911B226381310063FFEE /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15911A226381310063FFEE /* PlayButton.swift */; };
 		C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */; };
 		C988B33022621049009619AB /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */; };
@@ -43,6 +45,8 @@
 		9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsLocalDataSource.swift; sourceTree = "<group>"; };
 		9B15910F22635A1F0063FFEE /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		9B15911222635F0F0063FFEE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9B159115226373120063FFEE /* OneSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSongViewController.swift; sourceTree = "<group>"; };
+		9B159116226373120063FFEE /* OneSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneSongViewController.xib; sourceTree = "<group>"; };
 		9B15911A226381310063FFEE /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				9B159119226380B10063FFEE /* Views */,
+				9B159114226372F10063FFEE /* OneSongViewController */,
 				9B15910B226358830063FFEE /* Controllers */,
 			);
 			path = NowPlaying;
@@ -156,6 +161,15 @@
 				9B15911222635F0F0063FFEE /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B159114226372F10063FFEE /* OneSongViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B159115226373120063FFEE /* OneSongViewController.swift */,
+				9B159116226373120063FFEE /* OneSongViewController.xib */,
+			);
+			path = OneSongViewController;
 			sourceTree = "<group>";
 		};
 		9B159119226380B10063FFEE /* Views */ = {
@@ -305,6 +319,7 @@
 				C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */,
 				C994D462225FA89100E70C1B /* Assets.xcassets in Resources */,
 				C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */,
+				9B159118226373120063FFEE /* OneSongViewController.xib in Resources */,
 				C988B33022621049009619AB /* PlaylistCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +345,7 @@
 				C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */,
 				9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */,
 				9B15911B226381310063FFEE /* PlayButton.swift in Sources */,
+				9B159117226373120063FFEE /* OneSongViewController.swift in Sources */,
 				C988B3352262270C009619AB /* PlaylistsCollectionViewHeader.swift in Sources */,
 				9B15910522631F970063FFEE /* PlaylistsLocalDataSource.swift in Sources */,
 				9B15911022635A1F0063FFEE /* LoadingViewController.swift in Sources */,
