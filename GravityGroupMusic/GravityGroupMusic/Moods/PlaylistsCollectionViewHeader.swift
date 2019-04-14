@@ -9,7 +9,7 @@
 import UIKit
 
 /// Custom view to be used as the header of PlaylistsCollectionView.
-class PlaylistsCollectionViewHeader: UIView {
+class PlaylistsCollectionViewHeader: UICollectionReusableView {
     @IBOutlet private var titleLabel: UILabel!
     
     /// Configures the view with title text.
