@@ -18,7 +18,7 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
     /// - Parameters:
     ///   - image: Cover image.
     ///   - title: Playlist name.
-    func configure(with image: UIImage, title: String) {
+    func configure(with image: UIImage?, title: String) {
         playlistImageView.image = image
         playlistTitleLabel.text = title
     }
