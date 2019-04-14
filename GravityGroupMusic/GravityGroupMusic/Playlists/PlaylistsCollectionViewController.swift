@@ -11,7 +11,10 @@ import UIKit
 /// Screen that displays playlists.
 class PlaylistsCollectionViewController: UICollectionViewController {
     
-    private let names = ["EDM", "CHILL", "PARTY", "EVERGREEN", "WORKOUT", "ROMANTIC"]
+    // MARK: - Properties
+    
+    private var playlistsDataSource: PlaylistsDataSource = PlaylistsLocalDataSource()
+    private var playlists = [Playlist]()
 
     // MARK: - View Life Cycle
     
@@ -19,6 +22,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         title = "PLAYLISTS"
         registerNibs()
+        loadPlaylists()
     }
     
     private func registerNibs() {
@@ -28,17 +32,28 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         let headerNib = UINib(nibName: String(describing: PlaylistsCollectionViewHeader.self), bundle: nil)
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: PlaylistsCollectionViewHeader.self))
     }
+    
+    // MARK: - Private Methods
+    
+    private func loadPlaylists() {
+        playlistsDataSource.getAllPlaylists {[weak self] (playlists, error) in
+            guard let playlists = playlists else { return }
+            
+            self?.playlists = playlists
+            self?.collectionView.reloadData()
+        }
+    }
 
     // MARK: - UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return names.count
+        return playlists.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlaylistCollectionViewCell.self), for: indexPath) as! PlaylistCollectionViewCell
-        let stubImage = UIImage(named: "party")!
-        cell.configure(with: stubImage, title: names[indexPath.row])
+        let playlist = playlists[indexPath.row]
+        cell.configure(with: UIImage(named: playlist.coverImageName), title: playlist.name)
     
         return cell
     }
