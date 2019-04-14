@@ -11,9 +11,10 @@ import UIKit
 /// Screen that displays playlists.
 class PlaylistsCollectionViewController: UICollectionViewController {
     
-    private let cellReuseId = "playlistcell"
     private let names = ["EDM", "CHILL", "PARTY", "EVERGREEN", "WORKOUT", "ROMANTIC"]
 
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "PLAYLISTS"
@@ -22,7 +23,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     
     private func registerCell() {
         let cellNib = UINib(nibName: String(describing: PlaylistCollectionViewCell.self), bundle: nil)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: cellReuseId)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: String(describing: PlaylistCollectionViewCell.self))
     }
 
     // MARK: - UICollectionViewDataSource
@@ -32,7 +33,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath) as! PlaylistCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlaylistCollectionViewCell.self), for: indexPath) as! PlaylistCollectionViewCell
         let stubImage = UIImage(named: "party")!
         cell.configure(with: stubImage, title: names[indexPath.row])
     
