@@ -18,12 +18,15 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "PLAYLISTS"
-        registerCell()
+        registerNibs()
     }
     
-    private func registerCell() {
+    private func registerNibs() {
         let cellNib = UINib(nibName: String(describing: PlaylistCollectionViewCell.self), bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: String(describing: PlaylistCollectionViewCell.self))
+        
+        let headerNib = UINib(nibName: String(describing: PlaylistsCollectionViewHeader.self), bundle: nil)
+        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: PlaylistsCollectionViewHeader.self))
     }
 
     // MARK: - UICollectionViewDataSource
@@ -38,6 +41,10 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         cell.configure(with: stubImage, title: names[indexPath.row])
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: PlaylistsCollectionViewHeader.self), for: indexPath)
     }
 }
 
@@ -58,5 +65,9 @@ extension PlaylistsCollectionViewController: UICollectionViewDelegateFlowLayout 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 63)
     }
 }
