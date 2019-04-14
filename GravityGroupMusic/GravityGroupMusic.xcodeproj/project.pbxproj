@@ -91,22 +91,48 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
-		9B159106226351A80063FFEE /* NowPlayingContainerViewController */ = {
+		9B159106226351A80063FFEE /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				9B15910B226358830063FFEE /* Controllers */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		9B159108226357DF0063FFEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */,
+				C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */,
+				C988B3342262270C009619AB /* PlaylistsCollectionViewHeader.swift */,
+				C988B3322262258E009619AB /* PlaylistsCollectionViewHeader.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B159109226357F00063FFEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C988B336226239B7009619AB /* PlaylistsCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B15910B226358830063FFEE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C994D459225FA88E00E70C1B /* NowPlayingContainerViewController.swift */,
 			);
-			path = NowPlayingContainerViewController;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C988B33122622500009619AB /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
-				9B1590FF22631DE40063FFEE /* DataSource */,
 				9B1590FC22631D150063FFEE /* Models */,
-				C988B3322262258E009619AB /* PlaylistsCollectionViewHeader.xib */,
-				C988B3342262270C009619AB /* PlaylistsCollectionViewHeader.swift */,
-				C988B336226239B7009619AB /* PlaylistsCollectionViewController.swift */,
+				9B159108226357DF0063FFEE /* Views */,
+				9B159109226357F00063FFEE /* Controllers */,
+				9B1590FF22631DE40063FFEE /* DataSource */,
 			);
 			path = Playlists;
 			sourceTree = "<group>";
@@ -132,16 +158,14 @@
 		C994D456225FA88E00E70C1B /* GravityGroupMusic */ = {
 			isa = PBXGroup;
 			children = (
-				9B159106226351A80063FFEE /* NowPlayingContainerViewController */,
 				C988B33122622500009619AB /* Playlists */,
+				9B159106226351A80063FFEE /* NowPlaying */,
 				C994D457225FA88E00E70C1B /* AppDelegate.swift */,
 				C994D45B225FA88E00E70C1B /* Main.storyboard */,
 				C994D461225FA89100E70C1B /* Assets.xcassets */,
 				C994D463225FA89100E70C1B /* LaunchScreen.storyboard */,
 				C994D466225FA89100E70C1B /* Info.plist */,
 				C994D45E225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld */,
-				C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */,
-				C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */,
 			);
 			path = GravityGroupMusic;
 			sourceTree = "<group>";
