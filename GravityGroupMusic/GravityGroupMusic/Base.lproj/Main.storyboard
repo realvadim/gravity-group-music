@@ -47,21 +47,45 @@
             </objects>
             <point key="canvasLocation" x="-846" y="466"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GravityGroupMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NowPlayingContainerViewController" customModule="GravityGroupMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-6x-iOe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-aM-V3C">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Dn-aM-V3C" firstAttribute="width" secondItem="yCb-6x-iOe" secondAttribute="width" id="Av8-kR-ACx"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Dn-aM-V3C" secondAttribute="bottom" id="Htt-Sq-K4t"/>
+                                    <constraint firstItem="9Dn-aM-V3C" firstAttribute="top" secondItem="yCb-6x-iOe" secondAttribute="top" id="QEL-ZB-Ifv"/>
+                                    <constraint firstItem="9Dn-aM-V3C" firstAttribute="leading" secondItem="yCb-6x-iOe" secondAttribute="leading" id="ZPL-ut-viy"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Dn-aM-V3C" secondAttribute="trailing" id="iI0-HA-ohl"/>
+                                    <constraint firstItem="9Dn-aM-V3C" firstAttribute="height" secondItem="yCb-6x-iOe" secondAttribute="height" id="whx-F2-dXA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.204744488" green="0.59879064559999995" blue="0.98524159190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCb-6x-iOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9vd-95-cuZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yCb-6x-iOe" secondAttribute="bottom" id="HV1-Hp-PiN"/>
+                            <constraint firstItem="yCb-6x-iOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Khn-kK-tjk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yCb-6x-iOe" secondAttribute="trailing" id="bab-L2-ZUT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="20d-Uu-fbE"/>
+                    <navigationItem key="navigationItem" id="e0S-Xa-7UB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1567" y="1166"/>
+            <point key="canvasLocation" x="-847.20000000000005" y="1164.4677661169417"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dVu-sd-VPn">
@@ -75,7 +99,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Suh-UP-d3e" kind="relationship" relationship="viewControllers" id="yd9-Ml-9Yj"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9y4-iD-iiA"/>
+                        <segue destination="CPG-eX-IeL" kind="relationship" relationship="viewControllers" id="9y4-iD-iiA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFH-VA-W2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,6 +124,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6y-GF-vzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1567.2" y="465.51724137931041"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="rdR-5M-dvc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CPG-eX-IeL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="20d-Uu-fbE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ex4-tS-Fwk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TRM-VP-1t4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbX-iT-N3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1567.2" y="1165.3673163418291"/>
         </scene>
     </scenes>
     <resources>

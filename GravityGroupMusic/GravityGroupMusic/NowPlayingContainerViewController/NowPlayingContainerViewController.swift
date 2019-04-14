@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NowPlayingContainerViewController.swift
 //  GravityGroupMusic
 //
 //  Created by Vadim Miropolskiy on 4/11/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NowPlayingContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        title = "NOW PLAYING"
     }
 
 
