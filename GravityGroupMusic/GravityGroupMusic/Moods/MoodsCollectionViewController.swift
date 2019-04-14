@@ -16,6 +16,7 @@ class MoodsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "PLAYLISTS"
         registerCell()
     }
     

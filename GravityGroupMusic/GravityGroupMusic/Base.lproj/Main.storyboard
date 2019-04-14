@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Moods Collection View Controller-->
         <scene sceneID="ZRh-3f-Eh2">
             <objects>
                 <collectionViewController id="N9l-GA-NxI" customClass="MoodsCollectionViewController" customModule="GravityGroupMusic" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,12 +40,12 @@
                             <outlet property="delegate" destination="N9l-GA-NxI" id="KJ6-Jj-Kkn"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="CI4-4j-l1p"/>
+                    <navigationItem key="navigationItem" id="Rdq-va-2Pf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLk-pe-7oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1567.2" y="465.51724137931041"/>
+            <point key="canvasLocation" x="-846" y="466"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -74,13 +74,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="N9l-GA-NxI" kind="relationship" relationship="viewControllers" id="yd9-Ml-9Yj"/>
+                        <segue destination="Suh-UP-d3e" kind="relationship" relationship="viewControllers" id="yd9-Ml-9Yj"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9y4-iD-iiA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFH-VA-W2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2505" y="812"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Wkl-1G-ph9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Suh-UP-d3e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="CI4-4j-l1p"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4pd-i0-IUj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N9l-GA-NxI" kind="relationship" relationship="rootViewController" id="thU-bO-iEh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6y-GF-vzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1567.2" y="465.51724137931041"/>
         </scene>
     </scenes>
     <resources>
