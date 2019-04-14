@@ -10,5 +10,9 @@ import Foundation
 
 /// Protocol for a playlists data source.
 protocol PlaylistsDataSource {
+    
+    /// Gets playlists.
+    ///
+    /// - Parameter completion: completion block that either accepts array of loaded playlists or error.
     func getAllPlaylists(with completion: @escaping ([Playlist]?, Error?) -> Void)
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1590FD22631D2B0063FFEE /* Playlist.swift */; };
 		9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910222631F270063FFEE /* PlaylistsDataSource.swift */; };
+		9B15910522631F970063FFEE /* PlaylistsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */; };
 		C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */; };
 		C988B33022621049009619AB /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */; };
 		C988B3332262258E009619AB /* PlaylistsCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B3322262258E009619AB /* PlaylistsCollectionViewHeader.xib */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		9B1590FD22631D2B0063FFEE /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		9B15910222631F270063FFEE /* PlaylistsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsDataSource.swift; sourceTree = "<group>"; };
+		9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsLocalDataSource.swift; sourceTree = "<group>"; };
 		C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		C988B3322262258E009619AB /* PlaylistsCollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistsCollectionViewHeader.xib; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9B15910222631F270063FFEE /* PlaylistsDataSource.swift */,
+				9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */,
 				9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */,
 				C988B3352262270C009619AB /* PlaylistsCollectionViewHeader.swift in Sources */,
+				9B15910522631F970063FFEE /* PlaylistsLocalDataSource.swift in Sources */,
 				C994D460225FA88E00E70C1B /* GravityGroupMusic.xcdatamodeld in Sources */,
 				C994D458225FA88E00E70C1B /* AppDelegate.swift in Sources */,
 			);
