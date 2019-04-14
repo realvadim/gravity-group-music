@@ -68,14 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C988B33122622500009619AB /* Moods */ = {
+		C988B33122622500009619AB /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
 				C988B3322262258E009619AB /* PlaylistsCollectionViewHeader.xib */,
 				C988B3342262270C009619AB /* PlaylistsCollectionViewHeader.swift */,
 				C988B336226239B7009619AB /* PlaylistsCollectionViewController.swift */,
 			);
-			path = Moods;
+			path = Playlists;
 			sourceTree = "<group>";
 		};
 		C994D44B225FA88E00E70C1B = {
@@ -99,7 +99,7 @@
 		C994D456225FA88E00E70C1B /* GravityGroupMusic */ = {
 			isa = PBXGroup;
 			children = (
-				C988B33122622500009619AB /* Moods */,
+				C988B33122622500009619AB /* Playlists */,
 				C994D457225FA88E00E70C1B /* AppDelegate.swift */,
 				C994D459225FA88E00E70C1B /* ViewController.swift */,
 				C994D45B225FA88E00E70C1B /* Main.storyboard */,
