@@ -95,7 +95,7 @@
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                    <state key="normal" image="rewind-button"/>
+                    <state key="normal" image="rewind_button"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
                             <color key="value" name="GGTurquoise"/>
@@ -125,7 +125,7 @@
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                    <state key="normal" image="fast-forward-button"/>
+                    <state key="normal" image="fast_forward_button"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
                             <color key="value" name="GGTurquoise"/>
@@ -169,10 +169,10 @@
         </view>
     </objects>
     <resources>
-        <image name="fast-forward-button" width="64" height="64"/>
+        <image name="fast_forward_button" width="64" height="64"/>
         <image name="mute" width="26" height="26"/>
         <image name="play_button" width="64" height="64"/>
-        <image name="rewind-button" width="64" height="64"/>
+        <image name="rewind_button" width="64" height="64"/>
         <image name="sound" width="26" height="26"/>
         <namedColor name="GGGray145">
             <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
