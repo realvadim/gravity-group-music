@@ -50,7 +50,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-M9-lri">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="song_cover_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-M9-lri">
                     <rect key="frame" x="54.5" y="147" width="266" height="266"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="266" id="8xT-gx-Vjv"/>
@@ -173,6 +173,7 @@
         <image name="mute" width="26" height="26"/>
         <image name="play_button" width="64" height="64"/>
         <image name="rewind_button" width="64" height="64"/>
+        <image name="song_cover_placeholder" width="288" height="288"/>
         <image name="sound" width="26" height="26"/>
         <namedColor name="GGGray145">
             <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
