@@ -12,10 +12,12 @@ extension UIViewController {
     
     /// Performs all the logic of adding a child ViewController.
     ///
-    /// - Parameter child: ViewController that is being added as a child.
-    func add(_ child: UIViewController) {
+    /// - Parameters:
+    ///   - child: ViewController that is being added as a child.
+    ///   - viewHolder: If supplied child's view will be added as a subview into it. Otherwise - to the root view of the ViewController.
+    func add(_ child: UIViewController, toViewHolder viewHolder: UIView? = nil) {
         addChild(child)
-        view.addSubview(child.view)
+        viewHolder != nil ? viewHolder?.addSubview(child.view) : view.addSubview(child.view)
         child.didMove(toParent: self)
     }
     
