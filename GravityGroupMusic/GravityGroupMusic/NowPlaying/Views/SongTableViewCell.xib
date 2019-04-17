@@ -44,6 +44,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" name="GGGray245"/>
                 <constraints>
                     <constraint firstItem="7kK-B3-ORY" firstAttribute="centerY" secondItem="1Kq-xh-3xz" secondAttribute="centerY" id="8j1-Z7-OoX"/>
                     <constraint firstItem="8eQ-FG-PbM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7kK-B3-ORY" secondAttribute="trailing" constant="21" id="DYj-d2-DEG"/>
@@ -65,6 +66,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="GGGray245">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GGWarmPink">
             <color red="0.9882352941176471" green="0.31764705882352939" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

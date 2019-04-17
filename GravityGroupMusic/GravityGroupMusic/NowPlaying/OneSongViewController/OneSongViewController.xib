@@ -133,7 +133,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="GGGray245"/>
             <constraints>
                 <constraint firstItem="6tP-kt-Jfp" firstAttribute="centerY" secondItem="mKP-Wv-X5v" secondAttribute="centerY" id="00C-3V-8C6"/>
                 <constraint firstItem="AiY-M9-lri" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6Fq-mT-UZy"/>
@@ -169,17 +169,20 @@
         </view>
     </objects>
     <resources>
-        <image name="fast_forward_button" width="96" height="96"/>
-        <image name="mute" width="39" height="39"/>
-        <image name="play_button" width="96" height="96"/>
-        <image name="rewind_button" width="96" height="96"/>
+        <image name="fast_forward_button" width="64" height="64"/>
+        <image name="mute" width="26" height="26"/>
+        <image name="play_button" width="64" height="64"/>
+        <image name="rewind_button" width="64" height="64"/>
         <image name="song_cover_placeholder" width="288" height="288"/>
-        <image name="sound" width="39" height="39"/>
+        <image name="sound" width="26" height="26"/>
         <namedColor name="GGGray145">
             <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GGGray216">
             <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GGGray245">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GGTurquoise">
             <color red="0.24705882352941178" green="0.75686274509803919" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
