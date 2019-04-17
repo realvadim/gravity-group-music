@@ -14,9 +14,13 @@ class NowPlayingContainerViewController: UIViewController {
         super.viewDidLoad()
         title = "NOW PLAYING"
         //add(OneSongViewController())
-        add(AlbumSongsListViewController()f)
+        //add(AlbumSongsListViewController()f)
     }
 
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        print(segue.identifier)
+    }
 }
 

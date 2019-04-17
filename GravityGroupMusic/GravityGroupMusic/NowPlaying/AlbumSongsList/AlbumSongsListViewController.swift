@@ -19,7 +19,9 @@ class AlbumSongsListViewController: UIViewController, UITableViewDataSource {
     }
     
     private func registerNib() {
+        
         let cellNib = UINib(nibName: String(describing: SongTableViewCell.self), bundle: nil)
+        
         songsListTableView.register(cellNib, forCellReuseIdentifier: String(describing: SongTableViewCell.self))
     }
 
