@@ -58,7 +58,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-6x-iOe">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-aM-V3C">
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="554" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-aM-V3C">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                     </view>
                                 </subviews>
@@ -68,11 +68,10 @@
                                     <constraint firstItem="9Dn-aM-V3C" firstAttribute="top" secondItem="yCb-6x-iOe" secondAttribute="top" id="QEL-ZB-Ifv"/>
                                     <constraint firstItem="9Dn-aM-V3C" firstAttribute="leading" secondItem="yCb-6x-iOe" secondAttribute="leading" id="ZPL-ut-viy"/>
                                     <constraint firstAttribute="trailing" secondItem="9Dn-aM-V3C" secondAttribute="trailing" id="iI0-HA-ohl"/>
-                                    <constraint firstItem="9Dn-aM-V3C" firstAttribute="height" secondItem="yCb-6x-iOe" secondAttribute="height" id="whx-F2-dXA"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.204744488" green="0.59879064559999995" blue="0.98524159190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yCb-6x-iOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9vd-95-cuZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yCb-6x-iOe" secondAttribute="bottom" id="HV1-Hp-PiN"/>
@@ -82,6 +81,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="e0S-Xa-7UB"/>
+                    <connections>
+                        <outlet property="contentView" destination="9Dn-aM-V3C" id="vTu-3P-Exr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
