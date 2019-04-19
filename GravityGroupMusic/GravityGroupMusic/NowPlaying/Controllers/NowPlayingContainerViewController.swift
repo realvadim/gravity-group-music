@@ -38,7 +38,7 @@ class NowPlayingContainerViewController: UIViewController {
         songsListView.translatesAutoresizingMaskIntoConstraints = false
         
         let views = ["oneSong": oneSongView, "songsList": songsListView]
-        var allConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[oneSong]-0-[songsList(200)]-0-|",
+        var allConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[oneSong]-0-[songsList]-0-|",
                                                             options: [], metrics: nil, views: views)
         allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[oneSong]-0-|",
                                                          options: [], metrics: nil, views: views)

@@ -31,6 +31,7 @@
 		C994D470225FA89100E70C1B /* GravityGroupMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */; };
 		C9C4EDDA2264F13900C99B7F /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */; };
 		C9C4EDDB2264F13900C99B7F /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */; };
+		C9D69CCA226A20CD002222DF /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		C994D471225FA89100E70C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		9B15910D226359DF0063FFEE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C9D69CC8226A20B1002222DF /* Views */,
 				9B15911122635EEC0063FFEE /* Extensions */,
 				9B15910E226359F30063FFEE /* Controllers */,
 			);
@@ -252,6 +255,14 @@
 				C994D471225FA89100E70C1B /* Info.plist */,
 			);
 			path = GravityGroupMusicTests;
+			sourceTree = "<group>";
+		};
+		C9D69CC8226A20B1002222DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +376,7 @@
 				9B15911322635F0F0063FFEE /* UIViewController+Extension.swift in Sources */,
 				9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */,
 				C988B337226239B7009619AB /* PlaylistsCollectionViewController.swift in Sources */,
+				C9D69CCA226A20CD002222DF /* SelfSizingTableView.swift in Sources */,
 				C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */,
 				9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */,
 				9B15911B226381310063FFEE /* PlayButton.swift in Sources */,
@@ -537,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				DEVELOPMENT_TEAM = UA35S4RY8U;
 				INFOPLIST_FILE = GravityGroupMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,7 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F6USA3EYF;
+				DEVELOPMENT_TEAM = UA35S4RY8U;
 				INFOPLIST_FILE = GravityGroupMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
