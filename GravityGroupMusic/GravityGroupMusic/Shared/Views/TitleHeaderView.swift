@@ -1,5 +1,5 @@
 //
-//  PlaylistsCollectionViewHeader.swift
+//  TitleHeaderView.swift
 //  GravityGroupMusic
 //
 //  Created by Vadim Miropolskiy on 4/13/19.
@@ -9,7 +9,7 @@
 import UIKit
 
 /// Custom view to be used as the header of PlaylistsCollectionView.
-class PlaylistsCollectionViewHeader: UICollectionReusableView {
+class TitleHeaderView: UICollectionReusableView {
     @IBOutlet private var titleLabel: UILabel!
     
     /// Configures the view with title text.

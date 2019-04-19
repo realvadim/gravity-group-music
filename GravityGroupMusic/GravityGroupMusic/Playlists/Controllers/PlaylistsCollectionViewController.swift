@@ -29,9 +29,9 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         let cellNib = UINib(nibName: String(describing: PlaylistCollectionViewCell.self), bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: String(describing: PlaylistCollectionViewCell.self))
         
-        let headerNib = UINib(nibName: String(describing: PlaylistsCollectionViewHeader.self), bundle: nil)
+        let headerNib = UINib(nibName: String(describing: TitleHeaderView.self), bundle: nil)
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: String(describing: PlaylistsCollectionViewHeader.self))
+                                withReuseIdentifier: String(describing: TitleHeaderView.self))
     }
     
     // MARK: - Private Methods
@@ -63,7 +63,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
         return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
-                                                               withReuseIdentifier: String(describing: PlaylistsCollectionViewHeader.self),
+                                                               withReuseIdentifier: String(describing: TitleHeaderView.self),
                                                                for: indexPath)
     }
 }
