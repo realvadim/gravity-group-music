@@ -86,23 +86,39 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-Tz-jKX">
-                    <rect key="frame" x="91.5" y="444" width="60" height="60"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-Tz-jKX">
+                    <rect key="frame" x="81.5" y="438" width="72" height="72"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="Tqj-jM-zhs"/>
-                        <constraint firstAttribute="width" constant="60" id="ZeZ-Mb-ALT"/>
+                        <constraint firstAttribute="height" constant="72" id="Tqj-jM-zhs"/>
+                        <constraint firstAttribute="width" constant="72" id="ZeZ-Mb-ALT"/>
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="22" maxX="28" maxY="22"/>
                     <state key="normal" image="rewind_button"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                            <color key="value" name="GGTurquoise"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="36"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKP-Wv-X5v" customClass="PlayButton" customModule="GravityGroupMusic" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tP-kt-Jfp">
+                    <rect key="frame" x="221.5" y="438" width="72" height="72"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="Sj6-XP-mdS"/>
+                        <constraint firstAttribute="height" constant="72" id="lFC-pM-MUD"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="28" minY="22" maxX="20" maxY="22"/>
+                    <state key="normal" image="fast_forward_button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="36"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKP-Wv-X5v" customClass="PlayButton" customModule="GravityGroupMusic" customModuleProvider="target">
                     <rect key="frame" x="141.5" y="428" width="92" height="92"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -110,27 +126,16 @@
                         <constraint firstAttribute="height" constant="92" id="xVW-cn-s1f"/>
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="imageEdgeInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    <inset key="imageEdgeInsets" minX="34" minY="32" maxX="30" maxY="32"/>
                     <state key="normal" image="play_button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="46"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="playButtonPressed:" destination="-1" eventType="touchUpInside" id="wgT-9m-pS3"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tP-kt-Jfp">
-                    <rect key="frame" x="223.5" y="444" width="60" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="60" id="Sj6-XP-mdS"/>
-                        <constraint firstAttribute="height" constant="60" id="lFC-pM-MUD"/>
-                    </constraints>
-                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                    <state key="normal" image="fast_forward_button"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                            <color key="value" name="GGTurquoise"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" name="GGGray245"/>
@@ -154,9 +159,9 @@
                 <constraint firstItem="4mC-DU-83z" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ht5-5A-FXE"/>
                 <constraint firstItem="4Rw-Tz-jKX" firstAttribute="centerY" secondItem="mKP-Wv-X5v" secondAttribute="centerY" id="jFf-Iy-3fW"/>
                 <constraint firstItem="aG4-Pv-82C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="lwV-jD-LIK"/>
-                <constraint firstItem="mKP-Wv-X5v" firstAttribute="leading" secondItem="4Rw-Tz-jKX" secondAttribute="trailing" constant="-10" id="mkJ-Ue-fJy"/>
+                <constraint firstItem="mKP-Wv-X5v" firstAttribute="leading" secondItem="4Rw-Tz-jKX" secondAttribute="trailing" constant="-12" id="mkJ-Ue-fJy"/>
                 <constraint firstItem="iNg-9T-UOs" firstAttribute="centerY" secondItem="bPI-zh-1wF" secondAttribute="centerY" id="n01-82-vnu"/>
-                <constraint firstItem="6tP-kt-Jfp" firstAttribute="leading" secondItem="mKP-Wv-X5v" secondAttribute="trailing" constant="-10" id="nM0-ZN-rPb"/>
+                <constraint firstItem="6tP-kt-Jfp" firstAttribute="leading" secondItem="mKP-Wv-X5v" secondAttribute="trailing" constant="-12" id="nM0-ZN-rPb"/>
                 <constraint firstItem="bPI-zh-1wF" firstAttribute="leading" secondItem="aG4-Pv-82C" secondAttribute="trailing" constant="4" id="oSL-dt-EyS"/>
                 <constraint firstItem="PQI-nF-zZu" firstAttribute="trailing" secondItem="iJg-bo-tap" secondAttribute="trailing" id="oiv-ef-5rv"/>
                 <constraint firstItem="l3l-ko-m5y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="tac-Z8-ZJH"/>
@@ -169,12 +174,12 @@
         </view>
     </objects>
     <resources>
-        <image name="fast_forward_button" width="64" height="64"/>
-        <image name="mute" width="26" height="26"/>
-        <image name="play_button" width="64" height="64"/>
-        <image name="rewind_button" width="64" height="64"/>
+        <image name="fast_forward_button" width="96" height="96"/>
+        <image name="mute" width="39" height="39"/>
+        <image name="play_button" width="96" height="96"/>
+        <image name="rewind_button" width="96" height="96"/>
         <image name="song_cover_placeholder" width="288" height="288"/>
-        <image name="sound" width="26" height="26"/>
+        <image name="sound" width="39" height="39"/>
         <namedColor name="GGGray145">
             <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -183,9 +188,6 @@
         </namedColor>
         <namedColor name="GGGray245">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GGTurquoise">
-            <color red="0.24705882352941178" green="0.75686274509803919" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GGWarmPink">
             <color red="0.9882352941176471" green="0.31764705882352939" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
