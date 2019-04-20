@@ -67,9 +67,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
                                                                          withReuseIdentifier: sectionHeaderReuseId,
                                                                          for: indexPath)
         
-        let titleHeaderView = Bundle.main.loadNibNamed(String(describing: TitleHeaderView.self),
-                                                       owner: self,
-                                                       options: nil)?.first as! TitleHeaderView
+        let titleHeaderView = TitleHeaderView()
         titleHeaderView.configure(with: "YOU MIGHT LIKE")
         headerView.addSubview(titleHeaderView)
         titleHeaderView.frame = headerView.bounds

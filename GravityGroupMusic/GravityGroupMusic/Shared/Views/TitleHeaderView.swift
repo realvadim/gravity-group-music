@@ -12,6 +12,25 @@ import UIKit
 class TitleHeaderView: UIView {
     @IBOutlet private var titleLabel: UILabel!
     
+    // MARK: - Initialization
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        let viewNib = Bundle.main.loadNibNamed(String(describing: TitleHeaderView.self), owner: self, options: nil)
+        let view = viewNib?.first as! UIView
+        view.frame = bounds
+        addSubview(view)
+    }
+    
     /// Configures the view with title text.
     ///
     /// - Parameter title: Text for title.
