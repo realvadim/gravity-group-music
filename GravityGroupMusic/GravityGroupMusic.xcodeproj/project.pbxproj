@@ -29,6 +29,7 @@
 		C994D462225FA89100E70C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C994D461225FA89100E70C1B /* Assets.xcassets */; };
 		C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994D463225FA89100E70C1B /* LaunchScreen.storyboard */; };
 		C994D470225FA89100E70C1B /* GravityGroupMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */; };
+		C9C08EA1226B093500D4960D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C08EA0226B093500D4960D /* UILabel+Extension.swift */; };
 		C9C4EDDA2264F13900C99B7F /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */; };
 		C9C4EDDB2264F13900C99B7F /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */; };
 		C9D69CCA226A20CD002222DF /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */; };
@@ -71,6 +72,7 @@
 		C994D46B225FA89100E70C1B /* GravityGroupMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravityGroupMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGroupMusicTests.swift; sourceTree = "<group>"; };
 		C994D471225FA89100E70C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C08EA0226B093500D4960D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9B15911222635F0F0063FFEE /* UIViewController+Extension.swift */,
+				C9C08EA0226B093500D4960D /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C08EA1226B093500D4960D /* UILabel+Extension.swift in Sources */,
 				9B319B142266C7290040E60B /* AlbumSongsListViewController.swift in Sources */,
 				C994D45A225FA88E00E70C1B /* NowPlayingContainerViewController.swift in Sources */,
 				9B15911322635F0F0063FFEE /* UIViewController+Extension.swift in Sources */,
