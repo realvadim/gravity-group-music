@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumSongsListViewController" customModule="GravityGroupMusic" customModuleProvider="target">
             <connections>
                 <outlet property="songsListTableView" destination="2aH-Z4-vDZ" id="fBE-fR-Kzt"/>
+                <outlet property="titleHeaderView" destination="qpV-YY-WFe" id="Orj-JY-hK7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,22 +24,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-Z4-vDZ" customClass="SelfSizingTableView" customModule="GravityGroupMusic" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="83" width="375" height="584"/>
                     <color key="backgroundColor" name="GGGray245"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="7ie-f6-w5g"/>
                         <outlet property="delegate" destination="-1" id="73Z-ya-vyf"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpV-YY-WFe" customClass="TitleHeaderView" customModule="GravityGroupMusic" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="3KO-bd-Ip4"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="2aH-Z4-vDZ" firstAttribute="top" secondItem="qpV-YY-WFe" secondAttribute="bottom" id="0ef-pG-hNO"/>
                 <constraint firstItem="2aH-Z4-vDZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3of-Zf-N6u"/>
-                <constraint firstItem="2aH-Z4-vDZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BZN-nh-0Za"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2aH-Z4-vDZ" secondAttribute="trailing" id="KF8-vA-9Z3"/>
+                <constraint firstItem="qpV-YY-WFe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OHQ-GJ-mpr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qpV-YY-WFe" secondAttribute="trailing" id="guG-50-U2e"/>
+                <constraint firstItem="qpV-YY-WFe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kqm-SU-w63"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2aH-Z4-vDZ" secondAttribute="bottom" id="muJ-bR-hNC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
         </view>
     </objects>
     <resources>

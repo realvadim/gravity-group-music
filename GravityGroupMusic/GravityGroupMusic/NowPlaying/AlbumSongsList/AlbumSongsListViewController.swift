@@ -10,12 +10,13 @@ import UIKit
 
 class AlbumSongsListViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
-        // Do any additional setup after loading the view.
+        titleHeaderView.configure(with: "SONGS ON THIS ALBUM")
     }
     
     private func registerNib() {
