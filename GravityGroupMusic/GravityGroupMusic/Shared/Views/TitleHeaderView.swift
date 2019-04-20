@@ -16,6 +16,8 @@ class TitleHeaderView: UIView {
     ///
     /// - Parameter title: Text for title.
     func configure(with title: String) {
-        titleLabel.text = title
+        let letterSpacingAttributes = [NSAttributedString.Key.kern: 4.59]
+        titleLabel.replaceAttributedText(with: title,
+                                         addingMoreAttributes: letterSpacingAttributes)
     }
 }
