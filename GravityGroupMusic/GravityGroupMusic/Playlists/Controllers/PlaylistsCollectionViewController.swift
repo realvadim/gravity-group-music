@@ -15,6 +15,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     
     private var playlistsDataSource: PlaylistsDataSource = PlaylistsLocalDataSource()
     private var playlists = [Playlist]()
+    private let sectionHeaderReuseId = "titleHeader"
 
     // MARK: - View Life Cycle
     
@@ -29,9 +30,9 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         let cellNib = UINib(nibName: String(describing: PlaylistCollectionViewCell.self), bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: String(describing: PlaylistCollectionViewCell.self))
         
-        let headerNib = UINib(nibName: String(describing: TitleHeaderView.self), bundle: nil)
-        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: String(describing: TitleHeaderView.self))
+        collectionView.register(UICollectionReusableView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: sectionHeaderReuseId)
     }
     
     // MARK: - Private Methods
@@ -62,9 +63,18 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
-        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
-                                                               withReuseIdentifier: String(describing: TitleHeaderView.self),
-                                                               for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                                         withReuseIdentifier: sectionHeaderReuseId,
+                                                                         for: indexPath)
+        
+        let titleHeaderView = Bundle.main.loadNibNamed(String(describing: TitleHeaderView.self),
+                                                       owner: self,
+                                                       options: nil)?.first as! TitleHeaderView
+        titleHeaderView.configure(with: "YOU MIGHT LIKE")
+        headerView.addSubview(titleHeaderView)
+        titleHeaderView.frame = headerView.bounds
+        
+        return headerView
     }
 }
 
