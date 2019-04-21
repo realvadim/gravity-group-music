@@ -20,6 +20,8 @@ class PlaylistsLocalDataSource: PlaylistsDataSource {
                              Playlist(name: "ROMANTIC", coverImageName: "romantic")]
     
     func getAllPlaylists(with completion: @escaping ([Playlist]?, Error?) -> Void) {
-        completion(playlists, nil)
+        DispatchQueue.main.async {
+            completion(self.playlists, nil)
+        }
     }
 }

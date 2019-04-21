@@ -24,15 +24,21 @@ class PlaylistsFMADataSource: PlaylistsDataSource {
                         return Playlist(name: album.title, coverImageName: "workout")
                     })
                     
-                    completion(playlists, nil)
+                    DispatchQueue.main.async {
+                        completion(playlists, nil)
+                    }
                 } catch {
-                    completion(nil, error)
+                    DispatchQueue.main.async {
+                        completion(nil, error)
+                    }
                 }
                 
                 return
             }
             
-            completion(nil, error)
+            DispatchQueue.main.async {
+                completion(nil, error)
+            }
         }
     }
 }
