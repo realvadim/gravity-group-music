@@ -10,24 +10,23 @@ import UIKit
 
 class OneSongViewController: UIViewController {
 
+    let player = Player()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let urlString = "http://ggmusicstreaming.000webhostapp.com/rock4.mp3"
+        let url = URL(string: urlString)!
+        player.playStream(from: url)
+        player.playAudio()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func playButtonPressed(_ sender: PlayButton) {
-        sender.playingState = sender.playingState == .playing ? .notPlaying : .playing
+        if (sender.playingState == .playing) {
+            player.pauseAudio()
+            sender.playingState = .notPlaying
+        } else {
+            player.playAudio()
+            sender.playingState = .playing
+        }
     }
 }

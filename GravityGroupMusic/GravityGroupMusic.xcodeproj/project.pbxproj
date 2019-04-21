@@ -17,6 +17,7 @@
 		9B15911B226381310063FFEE /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15911A226381310063FFEE /* PlayButton.swift */; };
 		9B319B142266C7290040E60B /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */; };
 		9B319B152266C7290040E60B /* PlaylistSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */; };
+		C9530422226CB47400EB3589 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9530421226CB47400EB3589 /* Player.swift */; };
 		C96780EB226B6EA300B80375 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */; };
 		C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */; };
 		C96780EF226B74EE00B80375 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EE226B74EE00B80375 /* NetworkRequest.swift */; };
@@ -61,6 +62,7 @@
 		9B15911A226381310063FFEE /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
 		9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistSongsViewController.xib; sourceTree = "<group>"; };
+		C9530421226CB47400EB3589 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMANetworkEnvironment.swift; sourceTree = "<group>"; };
 		C96780EE226B74EE00B80375 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				9B159115226373120063FFEE /* OneSongViewController.swift */,
 				9B159116226373120063FFEE /* OneSongViewController.xib */,
+				C9530421226CB47400EB3589 /* Player.swift */,
 			);
 			path = OneSong;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				9B319B142266C7290040E60B /* PlaylistSongsViewController.swift in Sources */,
 				C994D45A225FA88E00E70C1B /* NowPlayingContainerViewController.swift in Sources */,
 				9B15911322635F0F0063FFEE /* UIViewController+Extension.swift in Sources */,
+				C9530422226CB47400EB3589 /* Player.swift in Sources */,
 				C96780F3226C22EE00B80375 /* ApiClient.swift in Sources */,
 				9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */,
 				C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */,
