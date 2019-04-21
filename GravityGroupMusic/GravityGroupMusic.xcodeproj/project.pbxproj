@@ -22,6 +22,7 @@
 		C96780EF226B74EE00B80375 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EE226B74EE00B80375 /* NetworkRequest.swift */; };
 		C96780F1226B764F00B80375 /* GetAlbumsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780F0226B764F00B80375 /* GetAlbumsRequest.swift */; };
 		C96780F3226C22EE00B80375 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780F2226C22EE00B80375 /* ApiClient.swift */; };
+		C96780F5226C23E500B80375 /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780F4226C23E400B80375 /* ApiClientImpl.swift */; };
 		C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */; };
 		C988B33022621049009619AB /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */; };
 		C988B3332262258E009619AB /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C988B3322262258E009619AB /* TitleHeaderView.xib */; };
@@ -66,6 +67,7 @@
 		C96780EE226B74EE00B80375 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		C96780F0226B764F00B80375 /* GetAlbumsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumsRequest.swift; sourceTree = "<group>"; };
 		C96780F2226C22EE00B80375 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		C96780F4226C23E400B80375 /* ApiClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
 		C988B32D22621049009619AB /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		C988B32E22621049009619AB /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		C988B3322262258E009619AB /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */,
 				C96780EE226B74EE00B80375 /* NetworkRequest.swift */,
 				C96780F2226C22EE00B80375 /* ApiClient.swift */,
+				C96780F4226C23E400B80375 /* ApiClientImpl.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */,
 				C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */,
 				C96780EF226B74EE00B80375 /* NetworkRequest.swift in Sources */,
+				C96780F5226C23E500B80375 /* ApiClientImpl.swift in Sources */,
 				C988B337226239B7009619AB /* PlaylistsCollectionViewController.swift in Sources */,
 				C9D69CCA226A20CD002222DF /* SelfSizingTableView.swift in Sources */,
 				C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */,

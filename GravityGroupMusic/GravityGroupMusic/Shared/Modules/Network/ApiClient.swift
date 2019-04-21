@@ -16,5 +16,5 @@ protocol ApiClient: AnyObject {
     ///   - completion: Completion block is invoked with either data or error.
     /// - Returns: URLSessionTask object, which can be manipulated by the client.
     func execute(request: NetworkRequest,
-                 completion: (Data?, Error?) -> Void) -> URLSessionTask
+                 completion: @escaping (Data?, Error?) -> Void) -> URLSessionTask
 }
