@@ -12,7 +12,7 @@ class NowPlayingContainerViewController: UIViewController {
     @IBOutlet private var contentView: UIView!
     
     private var oneSongViewController: OneSongViewController!
-    private var albumSongsListViewController: AlbumSongsListViewController!
+    private var playlistSongsViewController: PlaylistSongsViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +24,15 @@ class NowPlayingContainerViewController: UIViewController {
         oneSongViewController = OneSongViewController()
         add(oneSongViewController, toViewHolder: contentView)
         
-        albumSongsListViewController = AlbumSongsListViewController()
-        add(albumSongsListViewController, toViewHolder: contentView)
+        playlistSongsViewController = PlaylistSongsViewController()
+        add(playlistSongsViewController, toViewHolder: contentView)
         
         setupConstraints()
     }
     
     private func setupConstraints() {
         let oneSongView: UIView = oneSongViewController.view
-        let songsListView: UIView = albumSongsListViewController.view
+        let songsListView: UIView = playlistSongsViewController.view
         
         oneSongView.translatesAutoresizingMaskIntoConstraints = false
         songsListView.translatesAutoresizingMaskIntoConstraints = false

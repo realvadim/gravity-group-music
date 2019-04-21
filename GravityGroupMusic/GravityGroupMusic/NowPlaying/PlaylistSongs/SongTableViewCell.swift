@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Cell for one song in the list of the songs of an album.
+/// Cell for a song of a playlist.
 class SongTableViewCell: UITableViewCell {
 
     @IBOutlet private var numberLabel: UILabel!

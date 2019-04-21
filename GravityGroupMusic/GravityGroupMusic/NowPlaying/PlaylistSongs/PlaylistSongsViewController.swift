@@ -1,5 +1,5 @@
 //
-//  AlbumSongsListViewController.swift
+//  PlaylistSongsViewController.swift
 //  GravityGroupMusic
 //
 //  Created by Vadim Miropolskiy on 4/17/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumSongsListViewController: UIViewController, UITableViewDataSource {
+class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
@@ -16,7 +16,7 @@ class AlbumSongsListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
-        titleHeaderView.configure(with: "SONGS ON THIS ALBUM")
+        titleHeaderView.configure(with: "SONGS ON THIS PLAYLIST")
     }
     
     private func registerNib() {
