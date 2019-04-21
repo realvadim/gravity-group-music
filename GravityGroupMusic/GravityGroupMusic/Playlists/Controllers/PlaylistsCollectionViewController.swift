@@ -14,6 +14,8 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     // MARK: - Properties
     
     private var playlistsDataSource: PlaylistsDataSource = PlaylistsLocalDataSource()
+    //private var playlistsDataSource: PlaylistsDataSource = PlaylistsFMADataSource()
+    
     private var playlists = [Playlist]()
     private let sectionHeaderReuseId = "titleHeader"
 
