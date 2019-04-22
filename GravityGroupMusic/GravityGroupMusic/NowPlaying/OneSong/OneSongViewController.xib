@@ -13,6 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneSongViewController" customModule="GravityGroupMusic" customModuleProvider="target">
             <connections>
+                <outlet property="performerNameLabel" destination="l3l-ko-m5y" id="5K4-EF-0k1"/>
+                <outlet property="songCoverImageView" destination="AiY-M9-lri" id="DlP-W8-rek"/>
+                <outlet property="songNameLabel" destination="4mC-DU-83z" id="nSK-6F-kJx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -11,6 +11,9 @@ import UIKit
 class OneSongViewController: UIViewController {
 
     let player = Player()
+    @IBOutlet private var songNameLabel: UILabel!
+    @IBOutlet private var performerNameLabel: UILabel!
+    @IBOutlet private var songCoverImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
