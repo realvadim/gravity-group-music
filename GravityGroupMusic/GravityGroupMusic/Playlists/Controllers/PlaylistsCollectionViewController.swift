@@ -57,7 +57,7 @@ class PlaylistsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlaylistCollectionViewCell.self),
                                                       for: indexPath) as! PlaylistCollectionViewCell
         let playlist = playlists[indexPath.row]
-        cell.configure(with: UIImage(named: playlist.coverImageName), title: playlist.name)
+        cell.configure(with: UIImage(named: playlist.coverImageUrl), title: playlist.name)
     
         return cell
     }

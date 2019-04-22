@@ -8,17 +8,14 @@
 
 import Foundation
 
-/// Playlist model
-class Playlist {
+/// Playlist model.
+struct Playlist: Codable {
+    /// Playlist database id.
+    let id: Int
     
-    /// Name of the Playlist.
+    /// Name of the playlist.
     let name: String
     
-    /// Playlist cover image name.
-    let coverImageName: String
-    
-    init(name: String, coverImageName: String) {
-        self.name = name
-        self.coverImageName = coverImageName
-    }
+    /// Playlist cover image URL.
+    let coverImageUrl: String
 }

@@ -12,12 +12,7 @@ import Foundation
 ///
 /// Return hardcoded playlists collection.
 class PlaylistsLocalDataSource: PlaylistsDataSource {
-    private let playlists = [Playlist(name: "EDM", coverImageName: "edm"),
-                             Playlist(name: "CHILL", coverImageName: "chill"),
-                             Playlist(name: "PARTY", coverImageName: "party"),
-                             Playlist(name: "EVERGREEN", coverImageName: "evergreen"),
-                             Playlist(name: "WORKOUT", coverImageName: "workout"),
-                             Playlist(name: "ROMANTIC", coverImageName: "romantic")]
+    private let playlists = [Playlist]()
     
     func getAllPlaylists(with completion: @escaping ([Playlist]?, Error?) -> Void) {
         DispatchQueue.main.async {
