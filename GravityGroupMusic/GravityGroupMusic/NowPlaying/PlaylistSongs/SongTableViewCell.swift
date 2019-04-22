@@ -13,12 +13,17 @@ class SongTableViewCell: UITableViewCell {
 
     @IBOutlet private var numberLabel: UILabel!
     @IBOutlet private var songNameLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
+    /// Configures the cell with song number and name to display.
+    ///
+    /// - Parameters:
+    ///   - sequenceNumber: Song sequence number.
+    ///   - songName: Song name.
+    func configure(withSequenceNumber sequenceNumber: Int, songName: String) {
+        numberLabel.text = "\(sequenceNumber)"
+        songNameLabel.text = "\(songName)"
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
