@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "SPORT",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "STUDY",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "WORK",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage3.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "RELAX",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage4.jpg"
+  }
+]

@@ -36,6 +36,8 @@
 		C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994D463225FA89100E70C1B /* LaunchScreen.storyboard */; };
 		C994D470225FA89100E70C1B /* GravityGroupMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */; };
 		C9A919F3226DF712006C0B2A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A919F2226DF712006C0B2A /* Song.swift */; };
+		C9A919F7226DFF10006C0B2A /* playlistsLocalDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = C9A919F5226DFF10006C0B2A /* playlistsLocalDataSource.json */; };
+		C9A919F8226DFF10006C0B2A /* playlistSongsLocalDataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = C9A919F6226DFF10006C0B2A /* playlistSongsLocalDataSource.json */; };
 		C9C08EA1226B093500D4960D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C08EA0226B093500D4960D /* UILabel+Extension.swift */; };
 		C9C4EDDA2264F13900C99B7F /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */; };
 		C9C4EDDB2264F13900C99B7F /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */; };
@@ -86,6 +88,8 @@
 		C994D46F225FA89100E70C1B /* GravityGroupMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityGroupMusicTests.swift; sourceTree = "<group>"; };
 		C994D471225FA89100E70C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A919F2226DF712006C0B2A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C9A919F5226DFF10006C0B2A /* playlistsLocalDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playlistsLocalDataSource.json; sourceTree = "<group>"; };
+		C9A919F6226DFF10006C0B2A /* playlistSongsLocalDataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playlistSongsLocalDataSource.json; sourceTree = "<group>"; };
 		C9C08EA0226B093500D4960D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		9B15910D226359DF0063FFEE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C9A919F4226DFEDC006C0B2A /* LocalJSON */,
 				C96780E6226B341E00B80375 /* Modules */,
 				C9D69CC8226A20B1002222DF /* Views */,
 				9B15911122635EEC0063FFEE /* Extensions */,
@@ -286,6 +291,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C9A919F4226DFEDC006C0B2A /* LocalJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C9A919F5226DFF10006C0B2A /* playlistsLocalDataSource.json */,
+				C9A919F6226DFF10006C0B2A /* playlistSongsLocalDataSource.json */,
+			);
+			path = LocalJSON;
+			sourceTree = "<group>";
+		};
 		C9D69CC8226A20B1002222DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,12 +392,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A919F7226DFF10006C0B2A /* playlistsLocalDataSource.json in Resources */,
 				C988B3332262258E009619AB /* TitleHeaderView.xib in Resources */,
 				C994D465225FA89100E70C1B /* LaunchScreen.storyboard in Resources */,
 				9B319B152266C7290040E60B /* PlaylistSongsViewController.xib in Resources */,
 				C994D462225FA89100E70C1B /* Assets.xcassets in Resources */,
 				C9C4EDDB2264F13900C99B7F /* SongTableViewCell.xib in Resources */,
 				C994D45D225FA88E00E70C1B /* Main.storyboard in Resources */,
+				C9A919F8226DFF10006C0B2A /* playlistSongsLocalDataSource.json in Resources */,
 				9B159118226373120063FFEE /* OneSongViewController.xib in Resources */,
 				C988B33022621049009619AB /* PlaylistCollectionViewCell.xib in Resources */,
 			);
