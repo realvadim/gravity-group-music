@@ -7,24 +7,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 /// Cell that displays a cover for a playlist.
 class PlaylistCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var playlistImageView: UIImageView!
     @IBOutlet private var playlistTitleLabel: UILabel!
     
-    /// Congures the cell with data to be displayed.
+    /// Configures the cell with the title and url of the image to be displayed.
     ///
     /// - Parameters:
-    ///   - image: Cover image.
+    ///   - imageUrlString: Playlist cover image URL.
     ///   - title: Playlist name.
-    func configure(with image: UIImage?, title: String) {
-        playlistImageView.image = image
+    func configure(withImageUrlString imageUrlString: URL, title: String) {
+        playlistImageView.kf.indicatorType = .activity
+        playlistImageView.kf.setImage(with: ImageResource(downloadURL: imageUrlString))
         playlistTitleLabel.text = title
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
     }
 }
