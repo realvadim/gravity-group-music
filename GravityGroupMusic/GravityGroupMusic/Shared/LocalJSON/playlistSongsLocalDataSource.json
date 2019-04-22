@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Stressed out",
     "performerName": "Twenty one Pilots",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock1.mp3",
     "playlistId": 1
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Song 2",
     "performerName": "Artist 2",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage3.jpg",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock2.mp3",
     "playlistId": 1
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Song 3",
     "performerName": "Artist 3",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage4.jpg",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock3.mp3",
     "playlistId": 1
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Song 4",
     "performerName": "Artist 4",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock4.mp3",
     "playlistId": 1
   }

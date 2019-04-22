@@ -45,6 +45,7 @@
 		C9C4EDDB2264F13900C99B7F /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */; };
 		C9D69CCA226A20CD002222DF /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */; };
 		C9E2226C226E137400FE300F /* PlaylistSongsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2226B226E137400FE300F /* PlaylistSongsDataSource.swift */; };
+		C9E2226E226E154B00FE300F /* PlaylistSongsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2226D226E154B00FE300F /* PlaylistSongsLocalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
 		C9E2226B226E137400FE300F /* PlaylistSongsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongsDataSource.swift; sourceTree = "<group>"; };
+		C9E2226D226E154B00FE300F /* PlaylistSongsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongsLocalDataSource.swift; sourceTree = "<group>"; };
 		FFC4816F4DA1C903DB92947B /* Pods-GravityGroupMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusic/Pods-GravityGroupMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				C9E2226B226E137400FE300F /* PlaylistSongsDataSource.swift */,
+				C9E2226D226E154B00FE300F /* PlaylistSongsLocalDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				C96780F3226C22EE00B80375 /* ApiClient.swift in Sources */,
 				9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */,
 				C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */,
+				C9E2226E226E154B00FE300F /* PlaylistSongsLocalDataSource.swift in Sources */,
 				C96780EF226B74EE00B80375 /* NetworkRequest.swift in Sources */,
 				C96780F5226C23E500B80375 /* ApiClientImpl.swift in Sources */,
 				C988B337226239B7009619AB /* PlaylistsCollectionViewController.swift in Sources */,
