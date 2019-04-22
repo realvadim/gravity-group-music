@@ -13,6 +13,9 @@ class SongTableViewCell: UITableViewCell {
 
     @IBOutlet private var numberLabel: UILabel!
     @IBOutlet private var songNameLabel: UILabel!
+    
+    /// Invoked on a press of the play/pause button.
+    var requestPlaybackStateUpdate: (() -> Void)?
 
     /// Configures the cell with song number and name to display.
     ///
@@ -31,6 +34,6 @@ class SongTableViewCell: UITableViewCell {
     }
     
     @IBAction private func playButtonPressed(_ sender: PlayButton) {
-        // TODO implement the method
+        requestPlaybackStateUpdate?()
     }
 }

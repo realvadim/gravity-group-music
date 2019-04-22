@@ -41,8 +41,17 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
         
         let song = songs[indexPath.row]
         cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name)
+        cell.requestPlaybackStateUpdate = {[weak self] in
+            self?.requestPlaybackStateUpdate(withSongIndex: indexPath.row)
+        }
         
         return cell
+    }
+    
+    private func requestPlaybackStateUpdate(withSongIndex index: Int) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PlaybackStateUpdateRequested"),
+                                        object: nil,
+                                        userInfo: ["songIndex": index])
     }
 }
 
