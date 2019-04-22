@@ -10,8 +10,13 @@ import UIKit
 
 class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet var titleHeaderView: TitleHeaderView!
+    @IBOutlet private var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
+    var songs: [Song] = [] {
+        didSet {
+            songsListTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +32,17 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = songsListTableView.dequeueReusableCell(withIdentifier: String(describing: SongTableViewCell.self), for: indexPath)
+        let cell = songsListTableView.dequeueReusableCell(withIdentifier: String(describing: SongTableViewCell.self),
+                                                          for: indexPath) as! SongTableViewCell
+        
+        let song = songs[indexPath.row]
+        cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name)
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 

@@ -14,10 +14,24 @@ class NowPlayingContainerViewController: UIViewController {
     private var oneSongViewController: OneSongViewController!
     private var playlistSongsViewController: PlaylistSongsViewController!
     
+    var playlistId: Int = 1
+    private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
+    private var songs = [Song]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "NOW PLAYING"
+        loadSongs()
         setupChildViewControllers()
+    }
+    
+    private func loadSongs() {
+        playlistSongsDataSource.getPlaylistSongs(forPlaylistId: playlistId) {[weak self] (songs, error) in
+            guard let songs = songs else { return }
+            
+            self?.songs = songs
+            self?.playlistSongsViewController.songs = songs
+        }
     }
 
     private func setupChildViewControllers() {
