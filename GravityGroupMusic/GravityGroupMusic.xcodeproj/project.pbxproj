@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BBB6FC3827826798999ECF1 /* Pods_GravityGroupMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5A06F0FDF68151A3A2D85F /* Pods_GravityGroupMusic.framework */; };
 		9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1590FD22631D2B0063FFEE /* Playlist.swift */; };
 		9B15910322631F270063FFEE /* PlaylistsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910222631F270063FFEE /* PlaylistsDataSource.swift */; };
 		9B15910522631F970063FFEE /* PlaylistsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */; };
@@ -17,6 +18,7 @@
 		9B15911B226381310063FFEE /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15911A226381310063FFEE /* PlayButton.swift */; };
 		9B319B142266C7290040E60B /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */; };
 		9B319B152266C7290040E60B /* PlaylistSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */; };
+		9F668F3B13DDDC82CC62517D /* Pods_GravityGroupMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18700BE63415ADC6B01AC9DD /* Pods_GravityGroupMusicTests.framework */; };
 		C9530422226CB47400EB3589 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9530421226CB47400EB3589 /* Player.swift */; };
 		C96780EB226B6EA300B80375 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */; };
 		C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */; };
@@ -55,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18700BE63415ADC6B01AC9DD /* Pods_GravityGroupMusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravityGroupMusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2208DE6EB7D86E3C9EBAC48F /* Pods-GravityGroupMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusic/Pods-GravityGroupMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		2ECB639BD9B3534D17C43348 /* Pods-GravityGroupMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusicTests/Pods-GravityGroupMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A5A06F0FDF68151A3A2D85F /* Pods_GravityGroupMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravityGroupMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1590FD22631D2B0063FFEE /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		9B15910222631F270063FFEE /* PlaylistsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsDataSource.swift; sourceTree = "<group>"; };
 		9B15910422631F970063FFEE /* PlaylistsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsLocalDataSource.swift; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 		9B15911A226381310063FFEE /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
 		9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistSongsViewController.xib; sourceTree = "<group>"; };
+		BCEF075CE513135CDF0266B8 /* Pods-GravityGroupMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusicTests/Pods-GravityGroupMusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9530421226CB47400EB3589 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMANetworkEnvironment.swift; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 		C9C4EDD82264F13900C99B7F /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C4EDD92264F13900C99B7F /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		C9D69CC9226A20CD002222DF /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
+		FFC4816F4DA1C903DB92947B /* Pods-GravityGroupMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusic/Pods-GravityGroupMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBB6FC3827826798999ECF1 /* Pods_GravityGroupMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F668F3B13DDDC82CC62517D /* Pods_GravityGroupMusicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +256,8 @@
 				C994D456225FA88E00E70C1B /* GravityGroupMusic */,
 				C994D46E225FA89100E70C1B /* GravityGroupMusicTests */,
 				C994D455225FA88E00E70C1B /* Products */,
+				D47B6709FA913E3D84C86A8B /* Pods */,
+				EA769EC99A76C71F45EB7314 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,6 +323,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D47B6709FA913E3D84C86A8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2208DE6EB7D86E3C9EBAC48F /* Pods-GravityGroupMusic.debug.xcconfig */,
+				FFC4816F4DA1C903DB92947B /* Pods-GravityGroupMusic.release.xcconfig */,
+				2ECB639BD9B3534D17C43348 /* Pods-GravityGroupMusicTests.debug.xcconfig */,
+				BCEF075CE513135CDF0266B8 /* Pods-GravityGroupMusicTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA769EC99A76C71F45EB7314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A5A06F0FDF68151A3A2D85F /* Pods_GravityGroupMusic.framework */,
+				18700BE63415ADC6B01AC9DD /* Pods_GravityGroupMusicTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C994D474225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusic" */;
 			buildPhases = (
+				ABE599D1C9F20E08E1564036 /* [CP] Check Pods Manifest.lock */,
 				C994D450225FA88E00E70C1B /* Sources */,
 				C994D451225FA88E00E70C1B /* Frameworks */,
 				C994D452225FA88E00E70C1B /* Resources */,
+				5249E7C175172C33170D6B57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,6 +369,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C994D477225FA89100E70C1B /* Build configuration list for PBXNativeTarget "GravityGroupMusicTests" */;
 			buildPhases = (
+				E715870B670FA28DB3DAF641 /* [CP] Check Pods Manifest.lock */,
 				C994D467225FA89100E70C1B /* Sources */,
 				C994D468225FA89100E70C1B /* Frameworks */,
 				C994D469225FA89100E70C1B /* Resources */,
@@ -413,6 +448,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5249E7C175172C33170D6B57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GravityGroupMusic/Pods-GravityGroupMusic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravityGroupMusic/Pods-GravityGroupMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE599D1C9F20E08E1564036 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravityGroupMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E715870B670FA28DB3DAF641 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravityGroupMusicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C994D450225FA88E00E70C1B /* Sources */ = {
@@ -602,6 +706,7 @@
 		};
 		C994D475225FA89100E70C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2208DE6EB7D86E3C9EBAC48F /* Pods-GravityGroupMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +725,7 @@
 		};
 		C994D476225FA89100E70C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC4816F4DA1C903DB92947B /* Pods-GravityGroupMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -638,6 +744,7 @@
 		};
 		C994D478225FA89100E70C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ECB639BD9B3534D17C43348 /* Pods-GravityGroupMusicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -659,6 +766,7 @@
 		};
 		C994D479225FA89100E70C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCEF075CE513135CDF0266B8 /* Pods-GravityGroupMusicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
