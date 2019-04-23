@@ -25,12 +25,27 @@ class OneSongViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAudioSession()
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        becomeFirstResponder()
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
     private func refresh() {
         updateInterface()
         updateRemoteControl()
     }
     
-        player.playAudio()
+    private func setAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            try AVAudioSession.sharedInstance().setActive(true, options: [])
+        } catch {
+            print(error)
+        }
     }
 
     @IBAction private func playButtonPressed(_ sender: PlayButton) {
