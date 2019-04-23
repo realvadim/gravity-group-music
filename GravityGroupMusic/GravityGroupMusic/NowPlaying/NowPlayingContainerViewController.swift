@@ -8,17 +8,6 @@
 
 import UIKit
 
-/// List possible states of the player.
-///
-/// - standby: No song has been played. The first on is displayed by the player and is ready to be played.
-/// - paused: Player is paused. There is a song stopped in the middle.
-/// - playing: Player currently plays a track.
-enum PlaybackState {
-    case standby
-    case paused(song: Song)
-    case playing(song: Song)
-}
-
 class NowPlayingContainerViewController: UIViewController {
     @IBOutlet private var contentView: UIView!
     
@@ -34,7 +23,7 @@ class NowPlayingContainerViewController: UIViewController {
     // Another implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
     private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
     private var songs = [Song]()
-    private var playbackState: PlaybackState = .standby
+    private var playbackState: PlaybackStateType = .standby
     
     override func viewDidLoad() {
         super.viewDidLoad()

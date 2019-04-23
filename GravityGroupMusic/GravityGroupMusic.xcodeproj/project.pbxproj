@@ -19,6 +19,7 @@
 		9B319B142266C7290040E60B /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */; };
 		9B319B152266C7290040E60B /* PlaylistSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */; };
 		9F668F3B13DDDC82CC62517D /* Pods_GravityGroupMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18700BE63415ADC6B01AC9DD /* Pods_GravityGroupMusicTests.framework */; };
+		C9232198226F550300468BB7 /* PlaybackStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9232197226F550300468BB7 /* PlaybackStateType.swift */; };
 		C9530422226CB47400EB3589 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9530421226CB47400EB3589 /* Player.swift */; };
 		C96780EB226B6EA300B80375 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */; };
 		C96780ED226B6FB200B80375 /* FMANetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */; };
@@ -74,6 +75,7 @@
 		9B319B122266C7290040E60B /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
 		9B319B132266C7290040E60B /* PlaylistSongsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistSongsViewController.xib; sourceTree = "<group>"; };
 		BCEF075CE513135CDF0266B8 /* Pods-GravityGroupMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravityGroupMusicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravityGroupMusicTests/Pods-GravityGroupMusicTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9232197226F550300468BB7 /* PlaybackStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackStateType.swift; sourceTree = "<group>"; };
 		C9530421226CB47400EB3589 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C96780EA226B6EA200B80375 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		C96780EC226B6FB200B80375 /* FMANetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMANetworkEnvironment.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A919F2226DF712006C0B2A /* Song.swift */,
+				C9232197226F550300468BB7 /* PlaybackStateType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				C988B32F22621049009619AB /* PlaylistCollectionViewCell.swift in Sources */,
 				9B1590FE22631D2B0063FFEE /* Playlist.swift in Sources */,
 				9B15911B226381310063FFEE /* PlayButton.swift in Sources */,
+				C9232198226F550300468BB7 /* PlaybackStateType.swift in Sources */,
 				C96780EB226B6EA300B80375 /* NetworkEnvironment.swift in Sources */,
 				9B159117226373120063FFEE /* OneSongViewController.swift in Sources */,
 				C988B3352262270C009619AB /* TitleHeaderView.swift in Sources */,
