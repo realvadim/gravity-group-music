@@ -27,4 +27,8 @@ struct Song: Codable {
     
     /// Playlist database id.
     let playlistId: Int
+    
+    static func ==(lhs: Song, rhs: Song) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
