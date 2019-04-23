@@ -23,7 +23,7 @@ class NowPlayingContainerViewController: UIViewController {
     // Another implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
     private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
     private var songs = [Song]()
-    private var playbackState: PlaybackStateType = .standby
+    private var playbackState: PlaybackStateType = .notPlaying
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +89,7 @@ class NowPlayingContainerViewController: UIViewController {
         oneSongViewController.song = song
         
         switch playbackState {
-        case .standby:
+        case .notPlaying:
             let url = URL(string: song.playbackFileUrl)!
             oneSongViewController.player.playStream(from: url)
             playbackState = .playing(song: song)

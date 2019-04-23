@@ -14,7 +14,7 @@ import Foundation
 /// - paused: Player is paused. There is a song stopped in the middle.
 /// - playing: Player currently plays a track.
 enum PlaybackStateType {
-    case standby
+    case notPlaying
     case paused(song: Song)
     case playing(song: Song)
 }
