@@ -23,7 +23,7 @@ class NowPlayingContainerViewController: UIViewController {
     // Another implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
     private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
     private var songs = [Song]()
-    private var playbackState: PlaybackStateType = .notPlaying
+//    private var playbackState: PlaybackStateType = .notPlaying
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,35 +81,35 @@ class NowPlayingContainerViewController: UIViewController {
     }
     
     @objc private func PlaybackStateUpdateRequested(notification: Notification) {
-        guard let songIndex = notification.userInfo?["songIndex"] as? Int else {
-            return
-        }
-        
-        let song = songs[songIndex]
-        oneSongViewController.song = song
-        
-        switch playbackState {
-        case .notPlaying:
-            let url = URL(string: song.playbackFileUrl)!
-            oneSongViewController.player.playStream(from: url)
-            playbackState = .playing(song: song)
-        case .paused(let currentSong):
-            if currentSong.id == song.id {
-                oneSongViewController.play()
-            } else {
-                let url = URL(string: song.playbackFileUrl)!
-                oneSongViewController.player.playStream(from: url)
-            }
-            playbackState = .playing(song: song)
-        case .playing(let currentSong):
-            if currentSong.id == song.id {
-                oneSongViewController.pause()
-                playbackState = .paused(song: song)
-            } else {
-                let url = URL(string: song.playbackFileUrl)!
-                oneSongViewController.player.playStream(from: url)
-                playbackState = .playing(song: song)
-            }
-        }
+//        guard let songIndex = notification.userInfo?["songIndex"] as? Int else {
+//            return
+//        }
+//
+//        let song = songs[songIndex]
+//        oneSongViewController.song = song
+//
+//        switch playbackState {
+//        case .notPlaying(let currentSong):
+//            let url = URL(string: song.playbackFileUrl)!
+//            oneSongViewController.player.playStream(from: url)
+//            playbackState = .playing(song: song)
+//        case .paused(let currentSong):
+//            if currentSong.id == song.id {
+//                oneSongViewController.play()
+//            } else {
+//                let url = URL(string: song.playbackFileUrl)!
+//                oneSongViewController.player.playStream(from: url)
+//            }
+//            playbackState = .playing(song: song)
+//        case .playing(let currentSong):
+//            if currentSong.id == song.id {
+//                oneSongViewController.pause()
+//                playbackState = .paused(song: song)
+//            } else {
+//                let url = URL(string: song.playbackFileUrl)!
+//                oneSongViewController.player.playStream(from: url)
+//                playbackState = .playing(song: song)
+//            }
+//        }
     }
 }

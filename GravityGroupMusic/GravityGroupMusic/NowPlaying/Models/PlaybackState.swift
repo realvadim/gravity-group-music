@@ -14,14 +14,14 @@ import Foundation
 /// - paused: Player is paused. There is a song stopped in the middle.
 /// - playing: Player currently plays a track.
 enum PlaybackStateType {
-    case notPlaying
+    case notPlaying(song: Song)
     case paused(song: Song)
     case playing(song: Song)
 }
 
 /// Encapsulates player playback state. Notifies listeners when state is changed.
 class PlaybackState {
-    var playbackStateType: PlaybackStateType = .notPlaying {
+    var playbackStateType: PlaybackStateType {
         didSet {
             notifyListeners()
         }
