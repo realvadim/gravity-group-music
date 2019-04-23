@@ -37,7 +37,6 @@ class NowPlayingContainerViewController: UIViewController {
             guard let songs = songs, songs.count > 0 else { return }
             
             self?.songs = songs
-            self?.playlistSongsViewController.songs = songs
             self?.playbackState = PlaybackState(playbackStateType: .notPlaying(song: songs.first!))
             self?.setupChildViewControllers()
         }
@@ -49,6 +48,7 @@ class NowPlayingContainerViewController: UIViewController {
         playbackState.register(listener: oneSongViewController)
         
         playlistSongsViewController = PlaylistSongsViewController()
+        playlistSongsViewController.songs = songs
         add(playlistSongsViewController, toViewHolder: contentView)
         
         setupConstraints()

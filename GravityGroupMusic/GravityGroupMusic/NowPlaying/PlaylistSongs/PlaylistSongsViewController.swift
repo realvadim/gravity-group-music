@@ -12,16 +12,13 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
 
     @IBOutlet private var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
-    var songs: [Song] = [] {
-        didSet {
-            songsListTableView.reloadData()
-        }
-    }
+    var songs: [Song] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
         titleHeaderView.configure(with: "SONGS ON THIS PLAYLIST")
+        songsListTableView.reloadData()
     }
     
     private func registerNib() {
