@@ -28,8 +28,6 @@ class OneSongViewController: UIViewController {
     private func refresh() {
         updateInterface()
         updateRemoteControl()
-        
-        
     }
     
         player.playAudio()
@@ -60,5 +58,26 @@ class OneSongViewController: UIViewController {
     
     private func updateRemoteControl() {
         guard let song = song else { return }
+        
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: song.name,
+            MPMediaItemPropertyArtist: song.performerName
+        ]
+        
+        MPRemoteCommandCenter.shared().playCommand.isEnabled = true
+        MPRemoteCommandCenter.shared().playCommand.addTarget(self, action: #selector(play))
+        
+        MPRemoteCommandCenter.shared().pauseCommand.isEnabled = true
+        MPRemoteCommandCenter.shared().pauseCommand.addTarget(self, action: #selector(pause))
+    }
+    
+    // MARK: - Player
+    
+    @objc func play() {
+        player.playAudio()
+    }
+    
+    @objc func pause() {
+        player.pauseAudio()
     }
 }
