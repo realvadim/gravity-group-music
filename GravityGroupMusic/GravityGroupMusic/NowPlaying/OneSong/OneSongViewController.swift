@@ -7,23 +7,40 @@
 //
 
 import UIKit
+import MediaPlayer
+import Kingfisher
 
 class OneSongViewController: UIViewController {
 
     let player = Player()
+    var song: Song? = nil {
+        didSet {
+            refresh()
+        }
+    }
+    
     @IBOutlet private var songNameLabel: UILabel!
     @IBOutlet private var performerNameLabel: UILabel!
     @IBOutlet private var songCoverImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlString = "http://ggmusicstreaming.000webhostapp.com/rock4.mp3"
-        let url = URL(string: urlString)!
-        player.playStream(from: url)
+    private func updateInterface() {
+    private func refresh() {
+        guard let song = song else { return }
+        
+        songNameLabel.text = song.name
+        performerNameLabel.text = song.performerName
+        
+        let coverImageUrl = URL(string: song.coverImageUrl)!
+        songCoverImageView.kf.indicatorType = .activity
+        songCoverImageView.kf.setImage(with: ImageResource(downloadURL: coverImageUrl))
+    }
+    
         player.playAudio()
     }
 
-    @IBAction func playButtonPressed(_ sender: PlayButton) {
+    @IBAction private func playButtonPressed(_ sender: PlayButton) {
         if (sender.playingState == .playing) {
             player.pauseAudio()
             sender.playingState = .notPlaying
