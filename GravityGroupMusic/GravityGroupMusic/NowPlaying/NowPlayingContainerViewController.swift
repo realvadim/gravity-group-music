@@ -50,6 +50,7 @@ class NowPlayingContainerViewController: UIViewController {
         playlistSongsViewController = PlaylistSongsViewController()
         playlistSongsViewController.songs = songs
         add(playlistSongsViewController, toViewHolder: contentView)
+        playbackState.register(listener: playlistSongsViewController)
         
         setupConstraints()
     }
