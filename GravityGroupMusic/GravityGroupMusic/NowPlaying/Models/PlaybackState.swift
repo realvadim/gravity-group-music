@@ -17,6 +17,17 @@ enum PlaybackStateType {
     case notPlaying(song: Song)
     case paused(song: Song)
     case playing(song: Song)
+    
+    var associatedValue: Song {
+        switch self {
+        case .notPlaying(let song):
+            return song
+        case .paused(let song):
+            return song
+        case .playing(let song):
+            return song
+        }
+    }
 }
 
 /// Encapsulates player playback state. Notifies listeners when state is changed.
