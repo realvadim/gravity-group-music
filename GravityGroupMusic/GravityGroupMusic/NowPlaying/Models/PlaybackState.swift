@@ -40,6 +40,10 @@ class PlaybackState {
     
     private var listeners = [PlaybackStateListener]()
     
+    init(playbackStateType: PlaybackStateType) {
+        self.playbackStateType = playbackStateType
+    }
+    
     /// Registers a listener.
     ///
     /// - Parameter listener: an object that should be notified when the playback state changes.

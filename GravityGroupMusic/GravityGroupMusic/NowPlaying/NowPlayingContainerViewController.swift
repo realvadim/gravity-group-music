@@ -23,29 +23,30 @@ class NowPlayingContainerViewController: UIViewController {
     // Another implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
     private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
     private var songs = [Song]()
-//    private var playbackState: PlaybackStateType = .notPlaying
+    private var playbackState: PlaybackState!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "NOW PLAYING"
         loadSongs()
-        setupChildViewControllers()
         subscribeToNotifications()
     }
     
     private func loadSongs() {
         playlistSongsDataSource.getPlaylistSongs(forPlaylistId: playlistId) {[weak self] (songs, error) in
-            guard let songs = songs else { return }
+            guard let songs = songs, songs.count > 0 else { return }
             
             self?.songs = songs
             self?.playlistSongsViewController.songs = songs
-//            self?.oneSongViewController.song = songs.first
+            self?.playbackState = PlaybackState(playbackStateType: .notPlaying(song: songs.first!))
+            self?.setupChildViewControllers()
         }
     }
 
     private func setupChildViewControllers() {
         oneSongViewController = OneSongViewController()
         add(oneSongViewController, toViewHolder: contentView)
+        playbackState.register(listener: oneSongViewController)
         
         playlistSongsViewController = PlaylistSongsViewController()
         add(playlistSongsViewController, toViewHolder: contentView)
