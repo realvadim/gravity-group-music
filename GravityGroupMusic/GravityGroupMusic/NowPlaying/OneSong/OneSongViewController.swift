@@ -35,10 +35,6 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     func playbackStateChanged(to newPlaybackStateType: PlaybackStateType) {
         print("OBSERVER. OneSongVC got notification.")
         song = newPlaybackStateType.associatedValue
-        refresh()
-    }
-    
-    private func refresh() {
         updateInterface()
         updateRemoteControl()
     }
