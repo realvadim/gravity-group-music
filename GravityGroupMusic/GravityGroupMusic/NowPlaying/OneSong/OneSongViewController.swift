@@ -25,16 +25,11 @@ class OneSongViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    private func updateInterface() {
     private func refresh() {
-        guard let song = song else { return }
+        updateInterface()
+        updateRemoteControl()
         
-        songNameLabel.text = song.name
-        performerNameLabel.text = song.performerName
         
-        let coverImageUrl = URL(string: song.coverImageUrl)!
-        songCoverImageView.kf.indicatorType = .activity
-        songCoverImageView.kf.setImage(with: ImageResource(downloadURL: coverImageUrl))
     }
     
         player.playAudio()
@@ -48,5 +43,22 @@ class OneSongViewController: UIViewController {
             player.playAudio()
             sender.playingState = .playing
         }
+    }
+    
+    private func updateInterface() {
+        guard let song = song else { return }
+        
+        songNameLabel.text = song.name
+        performerNameLabel.text = song.performerName
+        
+        let coverImageUrl = URL(string: song.coverImageUrl)!
+        songCoverImageView.kf.indicatorType = .activity
+        songCoverImageView.kf.setImage(with: ImageResource(downloadURL: coverImageUrl))
+    }
+    
+    // MARK: - Remote Controls
+    
+    private func updateRemoteControl() {
+        guard let song = song else { return }
     }
 }
