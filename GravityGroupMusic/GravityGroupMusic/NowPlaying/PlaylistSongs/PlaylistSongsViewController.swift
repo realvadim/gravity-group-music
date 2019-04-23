@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
+class PlaylistSongsViewController: UIViewController, UITableViewDataSource, PlaybackStateListener {
 
     @IBOutlet private var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
@@ -27,6 +27,17 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource {
     private func registerNib() {
         let cellNib = UINib(nibName: String(describing: SongTableViewCell.self), bundle: nil)
         songsListTableView.register(cellNib, forCellReuseIdentifier: String(describing: SongTableViewCell.self))
+    }
+    
+    // MARK: - PlaybackStateListener
+    
+    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType) {
+        print("OBSERVER. PlaylistSongsVC got notification.")
+        let song = newPlaybackStateType.associatedValue
+        let index = songs.firstIndex { $0 == song }
+        
+        let cell = songsListTableView.cellForRow(at: IndexPath(row: index!, section: 0))
+        cell?.setSelected(true, animated: true)
     }
 
     // MARK: - UITableViewDataSource
