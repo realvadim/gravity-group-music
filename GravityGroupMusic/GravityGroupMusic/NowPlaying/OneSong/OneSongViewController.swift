@@ -10,14 +10,10 @@ import UIKit
 import MediaPlayer
 import Kingfisher
 
-class OneSongViewController: UIViewController {
+class OneSongViewController: UIViewController, PlaybackStateListener {
 
-    let player = Player()
-    var song: Song? = nil {
-        didSet {
-            refresh()
-        }
-    }
+    private let player = Player()
+    private var song: Song? = nil
     
     @IBOutlet private var songNameLabel: UILabel!
     @IBOutlet private var performerNameLabel: UILabel!
@@ -32,6 +28,14 @@ class OneSongViewController: UIViewController {
     
     override var canBecomeFirstResponder: Bool {
         return true
+    }
+    
+    // MARK: - PlaybackStateListener
+    
+    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType) {
+        print("OBSERVER. OneSongVC got notification.")
+        song = newPlaybackStateType.associatedValue
+        refresh()
     }
     
     private func refresh() {

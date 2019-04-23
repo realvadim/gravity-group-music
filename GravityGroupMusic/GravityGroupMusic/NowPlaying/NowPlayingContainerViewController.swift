@@ -39,7 +39,7 @@ class NowPlayingContainerViewController: UIViewController {
             
             self?.songs = songs
             self?.playlistSongsViewController.songs = songs
-            self?.oneSongViewController.song = songs.first
+//            self?.oneSongViewController.song = songs.first
         }
     }
 

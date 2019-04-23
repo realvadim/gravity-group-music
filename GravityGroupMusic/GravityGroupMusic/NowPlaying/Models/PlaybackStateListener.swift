@@ -10,5 +10,9 @@ import Foundation
 
 /// Protocol for objects that observe player playback state.
 protocol PlaybackStateListener {
-    func playbackStateChanged(to: PlaybackStateType)
+    
+    /// Invoked on a listener object to repond to playback state changes.
+    ///
+    /// - Parameter playbackStateType:
+    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType)
 }
