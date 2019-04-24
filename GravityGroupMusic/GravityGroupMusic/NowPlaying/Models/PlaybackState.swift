@@ -25,6 +25,7 @@ class PlaybackState {
     
     var songs = [Song]()
     var currentSong: Song
+    private var currentSongIndex = 0
     private var listeners = [PlaybackStateListener]()
     
     init(currentPlaybackStateType: PlaybackStateType, songs: [Song]) {
@@ -41,6 +42,25 @@ class PlaybackState {
         listener.playbackStateChanged(to: self)
     }
     
+    // MARK: - State Modifiers
+    
+    /// Moves to playing the previous track. Stops playing if it is the first track on the list.
+    func goToPreviousTrack() {
+        let previousTrackIndex = currentSongIndex - 1
+        if previousTrackIndex < 0 {
+            currentPlaybackStateType = .notPlaying
+            
+            return
+        }
+        
+        currentSongIndex = previousTrackIndex
+        currentSong = songs[previousTrackIndex]
+        notifyListeners()
+    }
+    
+    /// Handles taps on play/pause buttons. Either if it was tapped on the list or on the player itself.
+    ///
+    /// - Parameter newSong: Track that was tapped.
     func toggle(toSong newSong: Song) {
         switch currentPlaybackStateType {
         case .notPlaying, .paused:
@@ -53,7 +73,18 @@ class PlaybackState {
         notifyListeners()
     }
     
-    private func updateStateToTrack(withId id: Int) {
+    /// Moves to playing the next track. Stops playing if it is the last track on the list.
+    func goToNextTrack() {
+        let nextTrackIndex = currentSongIndex + 1
+        if nextTrackIndex >= songs.count {
+            currentPlaybackStateType = .notPlaying
+            
+            return
+        }
+        
+        currentSongIndex = nextTrackIndex
+        currentSong = songs[currentSongIndex]
+        notifyListeners()
     }
     
     private func notifyListeners() {

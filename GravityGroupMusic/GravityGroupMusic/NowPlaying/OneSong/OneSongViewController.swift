@@ -18,7 +18,7 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     @IBOutlet private var songNameLabel: UILabel!
     @IBOutlet private var performerNameLabel: UILabel!
     @IBOutlet private var songCoverImageView: UIImageView!
-    @IBOutlet var playPauseButton: PlayButton!
+    @IBOutlet private var playPauseButton: PlayButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +39,13 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
         
         switch newPlaybackState.currentPlaybackStateType {
         case .notPlaying:
+            playPauseButton.playingState = .notPlaying
             player.pauseAudio()
         case .paused:
+            playPauseButton.playingState = .notPlaying
             player.pauseAudio()
         case .playing:
+            playPauseButton.playingState = .playing
             // если та же самая, продолжи. Иначе playStream
             if currentState.currentSong == newPlaybackState.currentSong {
                 player.playStream(from: URL(string: newPlaybackState.currentSong.playbackFileUrl)!)
@@ -64,16 +67,6 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
             try AVAudioSession.sharedInstance().setActive(true, options: [])
         } catch {
             print(error)
-        }
-    }
-
-    @IBAction private func playButtonPressed(_ sender: PlayButton) {
-        if (sender.playingState == .playing) {
-            player.pauseAudio()
-            sender.playingState = .notPlaying
-        } else {
-            player.playAudio()
-            sender.playingState = .playing
         }
     }
     
@@ -103,6 +96,20 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
         
         MPRemoteCommandCenter.shared().pauseCommand.isEnabled = true
         MPRemoteCommandCenter.shared().pauseCommand.addTarget(self, action: #selector(pause))
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction private func previousTrackButtonTapped(_ sender: UIButton) {
+        currentState.goToPreviousTrack()
+    }
+    
+    @IBAction private func playPauseButtonTapped(_ sender: PlayButton) {
+        currentState.toggle(toSong: currentState.currentSong)
+    }
+    
+    @IBAction private func nextTrackButtonTapped(_ sender: UIButton) {
+        currentState.goToNextTrack()
     }
     
     // MARK: - Player
