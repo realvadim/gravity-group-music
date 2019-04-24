@@ -22,7 +22,6 @@ class PlaylistsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PLAYLISTS"
         registerNibs()
         loadPlaylists()
     }
