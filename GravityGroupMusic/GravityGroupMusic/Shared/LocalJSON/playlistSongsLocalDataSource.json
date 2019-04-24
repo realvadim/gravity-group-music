@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "A New Beginning",
-    "performerName": "Artist 1",
+    "performerName": "Bensound.com (rock #1)",
     "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock1.png",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock1.mp3",
     "playlistId": 1
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Punky",
-    "performerName": "Artist 2",
+    "performerName": "Bensound.com (rock #2)",
     "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock2.png",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock2.mp3",
     "playlistId": 1
@@ -18,15 +18,15 @@
   {
     "id": 3,
     "name": "Happy Rock",
-    "performerName": "Artist 3",
+    "performerName": "Bensound.com (rock #3)",
     "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock3.png",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock3.mp3",
     "playlistId": 1
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Going Higher",
-    "performerName": "Artist 4",
+    "performerName": "Bensound.com (rock #5)",
     "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock4.png",
     "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock4.mp3",
     "playlistId": 1
