@@ -1,22 +1,32 @@
 [
   {
     "id": 1,
-    "name": "SPORT",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage1.jpg"
+    "name": "EDM",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/edm.jpeg"
   },
   {
     "id": 2,
-    "name": "STUDY",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg"
+    "name": "CHILL",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/chill.jpeg"
   },
   {
     "id": 3,
-    "name": "WORK",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage3.jpeg"
+    "name": "PARTY",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/party.jpeg"
   },
   {
     "id": 4,
-    "name": "RELAX",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage4.jpg"
+    "name": "EVERGREEN",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/evergreen.jpeg"
+  },
+  {
+      "id": 5,
+      "name": "WORKOUT",
+      "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/workout.jpeg"
+  },
+  {
+      "id": 6,
+      "name": "ROMANTIC",
+      "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/playlistsCovers/romantic.jpeg"
   }
 ]

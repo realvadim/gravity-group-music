@@ -1,34 +1,34 @@
 [
   {
     "id": 1,
-    "name": "Stressed out",
-    "performerName": "Twenty one Pilots",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg",
-    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock1.mp3",
+    "name": "A New Beginning",
+    "performerName": "Artist 1",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock1.png",
+    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock1.mp3",
     "playlistId": 1
   },
   {
     "id": 2,
-    "name": "Song 2",
+    "name": "Punky",
     "performerName": "Artist 2",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage3.jpg",
-    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock2.mp3",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock2.png",
+    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock2.mp3",
     "playlistId": 1
   },
   {
     "id": 3,
-    "name": "Song 3",
+    "name": "Happy Rock",
     "performerName": "Artist 3",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage4.jpg",
-    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock3.mp3",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock3.png",
+    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock3.mp3",
     "playlistId": 1
   },
   {
     "id": 4,
-    "name": "Song 4",
+    "name": "Going Higher",
     "performerName": "Artist 4",
-    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/heavyImages/heavyImage2.jpg",
-    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock4.mp3",
+    "coverImageUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock4.png",
+    "playbackFileUrl": "http://ggmusicstreaming.000webhostapp.com/rock/rock4.mp3",
     "playlistId": 1
   }
 ]
