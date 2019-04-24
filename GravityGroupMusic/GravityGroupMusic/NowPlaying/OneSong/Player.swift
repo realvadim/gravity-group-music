@@ -9,28 +9,41 @@
 import Foundation
 import MediaPlayer
 
+/// Encapsulates the logic of stream playback.
 class Player {
-    var avPlayer: AVPlayer!
+    private var avPlayer: AVPlayer!
+    private var currentStreamUrlString = ""
     
     init() {
         avPlayer = AVPlayer()
     }
     
-    func playStream(from url: URL) {
+    /// Configures player with the url of the stream to play.
+    ///
+    /// - Parameter streamUrlString: Stream URL string.
+    func configure(withStreamUrlString streamUrlString: String) {
+        if currentStreamUrlString == streamUrlString {
+            return
+        }
+        
+        guard let url = URL(string: streamUrlString) else {
+            return
+        }
+        
+        currentStreamUrlString = streamUrlString
         avPlayer = AVPlayer(url: url)
-        avPlayer.play()
     }
     
+    /// Starts playback of the stream.
     func playAudio() {
-        if avPlayer.rate == 0 && avPlayer.error == nil { // currently not playing
-            // если не сделать эту проверку на error, а ошибка есть, то краш будет.
-            
+        if avPlayer.rate == 0 && avPlayer.error == nil {
             avPlayer.play()
         }
     }
     
+    /// Suspends playback of the stream.
     func pauseAudio() {
-        if avPlayer.rate > 0 && avPlayer.error == nil { // currently not playing
+        if avPlayer.rate > 0 && avPlayer.error == nil {
             avPlayer.pause()
         }
     }

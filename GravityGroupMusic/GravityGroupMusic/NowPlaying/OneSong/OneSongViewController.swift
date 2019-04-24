@@ -40,14 +40,8 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
             player.pauseAudio()
         case .playing:
             playPauseButton.playingState = .playing
-            // если та же самая, продолжи. Иначе playStream
-            if currentState.currentSong == newPlaybackState.currentSong {
-                player.playStream(from: URL(string: newPlaybackState.currentSong.playbackFileUrl)!)
-                player.playAudio()
-            } else {
-                player.playStream(from: URL(string: newPlaybackState.currentSong.playbackFileUrl)!)
-                player.playAudio()
-            }
+            player.configure(withStreamUrlString: newPlaybackState.currentSong.playbackFileUrl)
+            player.playAudio()
         }
         
         currentState = newPlaybackState
@@ -65,31 +59,13 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     }
     
     private func updateInterface() {
-        
         songNameLabel.text = currentState.currentSong.name
         performerNameLabel.text = currentState.currentSong.performerName
         playPauseButton.playingState = currentState.currentPlaybackStateType == .playing ? .playing : .notPlaying;
         
-        
         let coverImageUrl = URL(string: currentState.currentSong.coverImageUrl)!
         songCoverImageView.kf.indicatorType = .activity
         songCoverImageView.kf.setImage(with: ImageResource(downloadURL: coverImageUrl))
-    }
-    
-    // MARK: - Remote Controls
-    
-    private func updateRemoteControl() {
-        
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: currentState.currentSong.name,
-            MPMediaItemPropertyArtist: currentState.currentSong.performerName
-        ]
-        
-        MPRemoteCommandCenter.shared().playCommand.isEnabled = true
-        MPRemoteCommandCenter.shared().playCommand.addTarget(self, action: #selector(play))
-        
-        MPRemoteCommandCenter.shared().pauseCommand.isEnabled = true
-        MPRemoteCommandCenter.shared().pauseCommand.addTarget(self, action: #selector(pause))
     }
     
     // MARK: - IBActions
@@ -106,13 +82,26 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
         currentState.goToNextTrack()
     }
     
-    // MARK: - Player
+    // MARK: - Remote Control (Lock Screen)
     
-    @objc func play() {
-        player.playAudio()
+    private func updateRemoteControl() {
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: currentState.currentSong.name,
+            MPMediaItemPropertyArtist: currentState.currentSong.performerName
+        ]
+        
+        MPRemoteCommandCenter.shared().playCommand.isEnabled = true
+        MPRemoteCommandCenter.shared().playCommand.addTarget(self, action: #selector(play))
+        
+        MPRemoteCommandCenter.shared().pauseCommand.isEnabled = true
+        MPRemoteCommandCenter.shared().pauseCommand.addTarget(self, action: #selector(pause))
     }
     
-    @objc func pause() {
+    @objc private func play() {
+        player.playAudio()
+    }
+
+    @objc private func pause() {
         player.pauseAudio()
     }
 }
