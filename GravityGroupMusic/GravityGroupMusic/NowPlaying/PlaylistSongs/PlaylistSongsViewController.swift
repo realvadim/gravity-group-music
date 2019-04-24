@@ -44,14 +44,12 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
                                                           for: indexPath) as! SongTableViewCell
         
         let song = currentPlaybackState.songs[indexPath.row]
-        cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name)
+        let isCurrentSong = currentPlaybackState.currentSong == song
+        cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name, isCurrentSong: isCurrentSong)
         cell.onPlayPauseButtonTap = {[weak self] in
             self?.toggle(song: song)
         }
         
-        
-        let isCurrentSong = currentPlaybackState.currentSong == song
-        cell.setSelected(isCurrentSong, animated: true)
         cell.playPauseButton.playingState = .notPlaying
         if (currentPlaybackState.currentPlaybackStateType == .playing && isCurrentSong) {
             cell.playPauseButton.playingState = .playing

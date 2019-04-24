@@ -18,24 +18,18 @@ class SongTableViewCell: UITableViewCell {
     /// Invoked on a press of the play/pause button.
     var onPlayPauseButtonTap: (() -> Void)?
 
-    /// Configures the cell with song number and name to display.
+    /// Configures the cell with data to display.
     ///
     /// - Parameters:
     ///   - sequenceNumber: Song sequence number.
     ///   - songName: Song name.
-    func configure(withSequenceNumber sequenceNumber: Int, songName: String) {
+    ///   - isCurrentSong: It the song is currently selected, it will be highlighted with a different color.
+    func configure(withSequenceNumber sequenceNumber: Int, songName: String, isCurrentSong: Bool) {
         numberLabel.text = "\(sequenceNumber)"
-        songNameLabel.text = "\(songName)"
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        let originalButtonBackgroundColor = playPauseButton.backgroundColor
+        numberLabel.textColor = isCurrentSong ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
         
-        super.setSelected(selected, animated: animated)
-
-        numberLabel.textColor = selected ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
-        songNameLabel.textColor = selected ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
-        playPauseButton.backgroundColor = originalButtonBackgroundColor
+        songNameLabel.text = "\(songName)"
+        songNameLabel.textColor = isCurrentSong ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
     }
     
     @IBAction private func playButtonPressed(_ sender: PlayButton) {
