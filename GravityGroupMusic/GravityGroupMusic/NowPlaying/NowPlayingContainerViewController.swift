@@ -20,9 +20,8 @@ class NowPlayingContainerViewController: UIViewController {
     
     // For now we get the data from a local JSON file.
     // this can be easily switched to another implementation of the protocol.
-    // Another implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
+    // Another example of the implementation of this protocol (which uses network module) is in FMAAttempt branch of this repo.
     private var playlistSongsDataSource: PlaylistSongsDataSource = PlaylistSongsLocalDataSource()
-    private var songs = [Song]()
     private var playbackState: PlaybackState!
     
     override func viewDidLoad() {
@@ -36,8 +35,7 @@ class NowPlayingContainerViewController: UIViewController {
         playlistSongsDataSource.getPlaylistSongs(forPlaylistId: playlistId) {[weak self] (songs, error) in
             guard let songs = songs, songs.count > 0 else { return }
             
-            self?.songs = songs
-            self?.playbackState = PlaybackState(playbackStateType: .notPlaying(song: songs.first!))
+            self?.playbackState = PlaybackState(currentPlaybackStateType: .notPlaying, songs: songs)
             self?.setupChildViewControllers()
         }
     }
@@ -45,10 +43,11 @@ class NowPlayingContainerViewController: UIViewController {
     private func setupChildViewControllers() {
         oneSongViewController = OneSongViewController()
         add(oneSongViewController, toViewHolder: contentView)
+        oneSongViewController.currentState = playbackState
         playbackState.register(listener: oneSongViewController)
         
         playlistSongsViewController = PlaylistSongsViewController()
-        playlistSongsViewController.songs = songs
+        playlistSongsViewController.currentPlaybackState = playbackState
         add(playlistSongsViewController, toViewHolder: contentView)
         playbackState.register(listener: playlistSongsViewController)
         
@@ -78,40 +77,15 @@ class NowPlayingContainerViewController: UIViewController {
     private func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(PlaybackStateUpdateRequested(notification:)),
-                                               name: NSNotification.Name(rawValue: "PlaybackStateUpdateRequested"),
+                                               name: NSNotification.Name(rawValue: "ToggleSong"),
                                                object: nil)
     }
     
     @objc private func PlaybackStateUpdateRequested(notification: Notification) {
-//        guard let songIndex = notification.userInfo?["songIndex"] as? Int else {
-//            return
-//        }
-//
-//        let song = songs[songIndex]
-//        oneSongViewController.song = song
-//
-//        switch playbackState {
-//        case .notPlaying(let currentSong):
-//            let url = URL(string: song.playbackFileUrl)!
-//            oneSongViewController.player.playStream(from: url)
-//            playbackState = .playing(song: song)
-//        case .paused(let currentSong):
-//            if currentSong.id == song.id {
-//                oneSongViewController.play()
-//            } else {
-//                let url = URL(string: song.playbackFileUrl)!
-//                oneSongViewController.player.playStream(from: url)
-//            }
-//            playbackState = .playing(song: song)
-//        case .playing(let currentSong):
-//            if currentSong.id == song.id {
-//                oneSongViewController.pause()
-//                playbackState = .paused(song: song)
-//            } else {
-//                let url = URL(string: song.playbackFileUrl)!
-//                oneSongViewController.player.playStream(from: url)
-//                playbackState = .playing(song: song)
-//            }
-//        }
+        guard let newSong = notification.userInfo?["song"] as? Song else {
+            return
+        }
+        
+        playbackState.toggle(toSong: newSong)
     }
 }

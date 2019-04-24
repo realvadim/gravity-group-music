@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneSongViewController" customModule="GravityGroupMusic" customModuleProvider="target">
             <connections>
                 <outlet property="performerNameLabel" destination="l3l-ko-m5y" id="5K4-EF-0k1"/>
+                <outlet property="playPauseButton" destination="mKP-Wv-X5v" id="Nd6-So-kRb"/>
                 <outlet property="songCoverImageView" destination="AiY-M9-lri" id="DlP-W8-rek"/>
                 <outlet property="songNameLabel" destination="4mC-DU-83z" id="nSK-6F-kJx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -53,8 +54,9 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="song_cover_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-M9-lri">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-M9-lri">
                     <rect key="frame" x="54.5" y="147" width="266" height="266"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.48999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="266" id="8xT-gx-Vjv"/>
                         <constraint firstAttribute="width" constant="266" id="AnK-iL-pwJ"/>
@@ -181,7 +183,6 @@
         <image name="mute" width="39" height="39"/>
         <image name="play_button" width="96" height="96"/>
         <image name="rewind_button" width="96" height="96"/>
-        <image name="song_cover_placeholder" width="288" height="288"/>
         <image name="sound" width="39" height="39"/>
         <namedColor name="GGGray145">
             <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

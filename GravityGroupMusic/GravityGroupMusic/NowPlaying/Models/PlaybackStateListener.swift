@@ -13,6 +13,6 @@ protocol PlaybackStateListener {
     
     /// Invoked on a listener object to repond to playback state changes.
     ///
-    /// - Parameter playbackStateType:
-    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType)
+    /// - Parameter newPlaybackState: new playback state.
+    func playbackStateChanged(to newPlaybackState: PlaybackState)
 }

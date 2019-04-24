@@ -12,7 +12,7 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
 
     @IBOutlet private var titleHeaderView: TitleHeaderView!
     @IBOutlet private var songsListTableView: UITableView!
-    var songs: [Song] = []
+    var currentPlaybackState: PlaybackState!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,38 +28,42 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
     
     // MARK: - PlaybackStateListener
     
-    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType) {
+    func playbackStateChanged(to newPlaybackState: PlaybackState) {
         print("OBSERVER. PlaylistSongsVC got notification.")
-        let song = newPlaybackStateType.associatedValue
-        let index = songs.firstIndex { $0 == song }
-        
-        let cell = songsListTableView.cellForRow(at: IndexPath(row: index!, section: 0))
-        cell?.setSelected(true, animated: true)
+        songsListTableView.reloadData()
     }
 
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+        return currentPlaybackState.songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = songsListTableView.dequeueReusableCell(withIdentifier: String(describing: SongTableViewCell.self),
                                                           for: indexPath) as! SongTableViewCell
         
-        let song = songs[indexPath.row]
+        let song = currentPlaybackState.songs[indexPath.row]
         cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name)
-        cell.requestPlaybackStateUpdate = {[weak self] in
-            self?.requestPlaybackStateUpdate(withSongIndex: indexPath.row)
+        cell.onPlayPauseButtonTap = {[weak self] in
+            self?.toggle(song: song)
+        }
+        
+        
+        let isCurrentSong = currentPlaybackState.currentSong == song
+        cell.setSelected(isCurrentSong, animated: true)
+        cell.playPauseButton.playingState = .notPlaying
+        if (currentPlaybackState.currentPlaybackStateType == .playing && isCurrentSong) {
+            cell.playPauseButton.playingState = .playing
         }
         
         return cell
     }
     
-    private func requestPlaybackStateUpdate(withSongIndex index: Int) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PlaybackStateUpdateRequested"),
+    private func toggle(song: Song) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ToggleSong"),
                                         object: nil,
-                                        userInfo: ["songIndex": index])
+                                        userInfo: ["song": song])
     }
 }
 

@@ -13,11 +13,12 @@ import Kingfisher
 class OneSongViewController: UIViewController, PlaybackStateListener {
 
     private let player = Player()
-    private var song: Song? = nil
+    var currentState: PlaybackState!
     
     @IBOutlet private var songNameLabel: UILabel!
     @IBOutlet private var performerNameLabel: UILabel!
     @IBOutlet private var songCoverImageView: UIImageView!
+    @IBOutlet var playPauseButton: PlayButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,27 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     
     // MARK: - PlaybackStateListener
     
-    func playbackStateChanged(to newPlaybackStateType: PlaybackStateType) {
+    func playbackStateChanged(to newPlaybackState: PlaybackState) {
         print("OBSERVER. OneSongVC got notification.")
-        song = newPlaybackStateType.associatedValue
+        
+        
+        switch newPlaybackState.currentPlaybackStateType {
+        case .notPlaying:
+            player.pauseAudio()
+        case .paused:
+            player.pauseAudio()
+        case .playing:
+            // если та же самая, продолжи. Иначе playStream
+            if currentState.currentSong == newPlaybackState.currentSong {
+                player.playStream(from: URL(string: newPlaybackState.currentSong.playbackFileUrl)!)
+                player.playAudio()
+            } else {
+                player.playStream(from: URL(string: newPlaybackState.currentSong.playbackFileUrl)!)
+                player.playAudio()
+            }
+        }
+        
+        currentState = newPlaybackState
         updateInterface()
         updateRemoteControl()
     }
@@ -59,12 +78,13 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     }
     
     private func updateInterface() {
-        guard let song = song else { return }
         
-        songNameLabel.text = song.name
-        performerNameLabel.text = song.performerName
+        songNameLabel.text = currentState.currentSong.name
+        performerNameLabel.text = currentState.currentSong.performerName
+        playPauseButton.playingState = currentState.currentPlaybackStateType == .playing ? .playing : .notPlaying;
         
-        let coverImageUrl = URL(string: song.coverImageUrl)!
+        
+        let coverImageUrl = URL(string: currentState.currentSong.coverImageUrl)!
         songCoverImageView.kf.indicatorType = .activity
         songCoverImageView.kf.setImage(with: ImageResource(downloadURL: coverImageUrl))
     }
@@ -72,11 +92,10 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     // MARK: - Remote Controls
     
     private func updateRemoteControl() {
-        guard let song = song else { return }
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: song.name,
-            MPMediaItemPropertyArtist: song.performerName
+            MPMediaItemPropertyTitle: currentState.currentSong.name,
+            MPMediaItemPropertyArtist: currentState.currentSong.performerName
         ]
         
         MPRemoteCommandCenter.shared().playCommand.isEnabled = true

@@ -8,40 +8,29 @@
 
 import Foundation
 
-/// List possible states of the player.
+/// List of possible states of the player.
 ///
-/// - standby: No song has been played. The first on is displayed by the player and is ready to be played.
+/// - notPlaying: No song is being played.
 /// - paused: Player is paused. There is a song stopped in the middle.
 /// - playing: Player currently plays a track.
 enum PlaybackStateType {
-    case notPlaying(song: Song)
-    case paused(song: Song)
-    case playing(song: Song)
-    
-    var associatedValue: Song {
-        switch self {
-        case .notPlaying(let song):
-            return song
-        case .paused(let song):
-            return song
-        case .playing(let song):
-            return song
-        }
-    }
+    case notPlaying
+    case paused
+    case playing
 }
 
 /// Encapsulates player playback state. Notifies listeners when state is changed.
 class PlaybackState {
-    var playbackStateType: PlaybackStateType {
-        didSet {
-            notifyListeners()
-        }
-    }
+    var currentPlaybackStateType: PlaybackStateType
     
+    var songs = [Song]()
+    var currentSong: Song
     private var listeners = [PlaybackStateListener]()
     
-    init(playbackStateType: PlaybackStateType) {
-        self.playbackStateType = playbackStateType
+    init(currentPlaybackStateType: PlaybackStateType, songs: [Song]) {
+        self.currentPlaybackStateType = currentPlaybackStateType
+        self.songs = songs
+        self.currentSong = songs.first!
     }
     
     /// Registers a listener.
@@ -49,11 +38,28 @@ class PlaybackState {
     /// - Parameter listener: an object that should be notified when the playback state changes.
     func register(listener: PlaybackStateListener) {
         listeners.append(listener)
+        listener.playbackStateChanged(to: self)
+    }
+    
+    func toggle(toSong newSong: Song) {
+        switch currentPlaybackStateType {
+        case .notPlaying, .paused:
+            currentPlaybackStateType = .playing
+        case .playing:
+            currentPlaybackStateType = currentSong == newSong ? .paused : .playing
+        }
+        
+        currentSong = newSong
+        notifyListeners()
+    }
+    
+    private func updateStateToTrack(withId id: Int) {
     }
     
     private func notifyListeners() {
+        print("OBSERVER. Notifying all started.")
         listeners.forEach {
-            $0.playbackStateChanged(to: playbackStateType)
+            $0.playbackStateChanged(to: self)
         }
     }
 }

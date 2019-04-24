@@ -13,9 +13,10 @@ class SongTableViewCell: UITableViewCell {
 
     @IBOutlet private var numberLabel: UILabel!
     @IBOutlet private var songNameLabel: UILabel!
+    @IBOutlet var playPauseButton: PlayButton!
     
     /// Invoked on a press of the play/pause button.
-    var requestPlaybackStateUpdate: (() -> Void)?
+    var onPlayPauseButtonTap: (() -> Void)?
 
     /// Configures the cell with song number and name to display.
     ///
@@ -28,12 +29,16 @@ class SongTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        let originalButtonBackgroundColor = playPauseButton.backgroundColor
+        
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        numberLabel.textColor = selected ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
+        songNameLabel.textColor = selected ? #colorLiteral(red: 0.9882352941, green: 0.3176470588, blue: 0.5215686275, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.49)
+        playPauseButton.backgroundColor = originalButtonBackgroundColor
     }
     
     @IBAction private func playButtonPressed(_ sender: PlayButton) {
-        requestPlaybackStateUpdate?()
+        onPlayPauseButtonTap?()
     }
 }
