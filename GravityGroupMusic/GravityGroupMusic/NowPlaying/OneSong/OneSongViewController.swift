@@ -38,9 +38,6 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
         case .notPlaying:
             playPauseButton.playingState = .notPlaying
             player.pauseAudio()
-        case .paused:
-            playPauseButton.playingState = .notPlaying
-            player.pauseAudio()
         case .playing:
             playPauseButton.playingState = .playing
             // если та же самая, продолжи. Иначе playStream

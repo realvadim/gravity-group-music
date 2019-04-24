@@ -8,14 +8,12 @@
 
 import Foundation
 
-/// List of possible states of the player.
+/// Possible states of the player.
 ///
 /// - notPlaying: No song is being played.
-/// - paused: Player is paused. There is a song stopped in the middle.
 /// - playing: Player currently plays a track.
 enum PlaybackStateType {
     case notPlaying
-    case paused
     case playing
 }
 
@@ -63,10 +61,10 @@ class PlaybackState {
     /// - Parameter newSong: Track that was tapped.
     func toggle(toSong newSong: Song) {
         switch currentPlaybackStateType {
-        case .notPlaying, .paused:
+        case .notPlaying:
             currentPlaybackStateType = .playing
         case .playing:
-            currentPlaybackStateType = currentSong == newSong ? .paused : .playing
+            currentPlaybackStateType = currentSong == newSong ? .notPlaying : .playing
         }
         
         currentSongIndex = songs.firstIndex { $0 == newSong }!
