@@ -19,7 +19,6 @@ class Player {
     func playStream(from url: URL) {
         avPlayer = AVPlayer(url: url)
         avPlayer.play()
-        print("Playing \(url.absoluteString)")
     }
     
     func playAudio() {

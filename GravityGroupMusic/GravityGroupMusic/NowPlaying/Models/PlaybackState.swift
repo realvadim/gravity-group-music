@@ -89,7 +89,6 @@ class PlaybackState {
     }
     
     private func notifyListeners() {
-        print("OBSERVER. Notifying all started.")
         listeners.forEach {
             $0.listener?.playbackStateChanged(to: self)
         }

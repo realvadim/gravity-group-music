@@ -29,7 +29,6 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
     // MARK: - PlaybackStateListener
     
     func playbackStateChanged(to newPlaybackState: PlaybackState) {
-        print("OBSERVER. PlaylistSongsVC got notification.")
         songsListTableView.reloadData()
     }
 

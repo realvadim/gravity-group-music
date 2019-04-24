@@ -34,9 +34,6 @@ class OneSongViewController: UIViewController, PlaybackStateListener {
     // MARK: - PlaybackStateListener
     
     func playbackStateChanged(to newPlaybackState: PlaybackState) {
-        print("OBSERVER. OneSongVC got notification.")
-        
-        
         switch newPlaybackState.currentPlaybackStateType {
         case .notPlaying:
             playPauseButton.playingState = .notPlaying

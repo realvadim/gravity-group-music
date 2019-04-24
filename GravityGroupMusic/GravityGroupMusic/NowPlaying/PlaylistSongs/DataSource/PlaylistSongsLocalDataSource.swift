@@ -26,8 +26,6 @@ class PlaylistSongsLocalDataSource: PlaylistSongsDataSource {
                 completion(songsDataSerialized, nil)
             }
         } catch let error {
-            print(error.localizedDescription)
-            
             DispatchQueue.main.async {
                 completion(nil, error)
             }
