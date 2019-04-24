@@ -46,8 +46,8 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
         let song = currentPlaybackState.songs[indexPath.row]
         let isCurrentSong = currentPlaybackState.currentSong == song
         cell.configure(withSequenceNumber: indexPath.row + 1, songName: song.name, isCurrentSong: isCurrentSong)
-        cell.onPlayPauseButtonTap = {[weak self] in
-            self?.toggle(song: song)
+        cell.onPlayPauseButtonTap = {[unowned self] in
+            self.currentPlaybackState.toggle(toSong: song)
         }
         
         cell.playPauseButton.playingState = .notPlaying
@@ -56,12 +56,6 @@ class PlaylistSongsViewController: UIViewController, UITableViewDataSource, Play
         }
         
         return cell
-    }
-    
-    private func toggle(song: Song) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ToggleSong"),
-                                        object: nil,
-                                        userInfo: ["song": song])
     }
 }
 

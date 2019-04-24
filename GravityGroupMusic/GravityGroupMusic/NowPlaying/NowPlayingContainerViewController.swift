@@ -28,7 +28,6 @@ class NowPlayingContainerViewController: UIViewController {
         super.viewDidLoad()
         title = "NOW PLAYING"
         loadSongs()
-        subscribeToNotifications()
     }
     
     private func loadSongs() {
@@ -70,22 +69,5 @@ class NowPlayingContainerViewController: UIViewController {
                                                          options: [], metrics: nil, views: views)
         
         NSLayoutConstraint.activate(allConstraints)
-    }
-    
-    // MARK: - Handling Notifications
-    
-    private func subscribeToNotifications() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(PlaybackStateUpdateRequested(notification:)),
-                                               name: NSNotification.Name(rawValue: "ToggleSong"),
-                                               object: nil)
-    }
-    
-    @objc private func PlaybackStateUpdateRequested(notification: Notification) {
-        guard let newSong = notification.userInfo?["song"] as? Song else {
-            return
-        }
-        
-        playbackState.toggle(toSong: newSong)
     }
 }
