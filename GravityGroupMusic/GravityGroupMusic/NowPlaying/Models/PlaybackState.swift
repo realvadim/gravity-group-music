@@ -26,7 +26,7 @@ class PlaybackState {
     var songs = [Song]()
     var currentSong: Song
     private var currentSongIndex = 0
-    private var listeners = [PlaybackStateListener]()
+    private var listeners = [Listener]()
     
     init(currentPlaybackStateType: PlaybackStateType, songs: [Song]) {
         self.currentPlaybackStateType = currentPlaybackStateType
@@ -38,7 +38,7 @@ class PlaybackState {
     ///
     /// - Parameter listener: an object that should be notified when the playback state changes.
     func register(listener: PlaybackStateListener) {
-        listeners.append(listener)
+        listeners.append(Listener(listener: listener))
         listener.playbackStateChanged(to: self)
     }
     
@@ -90,7 +90,15 @@ class PlaybackState {
     private func notifyListeners() {
         print("OBSERVER. Notifying all started.")
         listeners.forEach {
-            $0.playbackStateChanged(to: self)
+            $0.listener?.playbackStateChanged(to: self)
         }
+    }
+}
+
+// MARK: - Weakifying Listeners
+
+private extension PlaybackState {
+    struct Listener {
+        weak var listener: PlaybackStateListener?
     }
 }

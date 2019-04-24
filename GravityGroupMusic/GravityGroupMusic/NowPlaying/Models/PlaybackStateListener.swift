@@ -9,7 +9,7 @@
 import Foundation
 
 /// Protocol for objects that observe player playback state.
-protocol PlaybackStateListener {
+protocol PlaybackStateListener: AnyObject {
     
     /// Invoked on a listener object to repond to playback state changes.
     ///
