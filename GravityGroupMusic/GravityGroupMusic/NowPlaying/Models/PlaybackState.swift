@@ -69,6 +69,7 @@ class PlaybackState {
             currentPlaybackStateType = currentSong == newSong ? .paused : .playing
         }
         
+        currentSongIndex = songs.firstIndex { $0 == newSong }!
         currentSong = newSong
         notifyListeners()
     }
